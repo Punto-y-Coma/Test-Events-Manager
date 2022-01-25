@@ -3,8 +3,12 @@
 <html>
 =======
 <!DOCTYPE html>
+<<<<<<< HEAD:resources/views/layouts/layout.blade.php
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+=======
 <html lang="en">
 >>>>>>> 708fe15ca62c3a4278e29c6a700ac3fa47530d82
+>>>>>>> f204a4a776f3f5a361ba31c9c28971c07d3f78f7:resources/views/layout.blade.php
 <head>
     @include('includes.head')
 </head>
