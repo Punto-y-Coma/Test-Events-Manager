@@ -30,7 +30,7 @@
         </tbody>
     </table>
 
-    <div class="pagination d-flex justify-content-between">
+    <div class="d-flex justify-content-end">
       {!! $masterclasses->links() !!}
     </div>
 

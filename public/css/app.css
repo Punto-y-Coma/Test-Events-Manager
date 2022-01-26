@@ -11435,3 +11435,17 @@ header .navigation :last-child {
   background: #E5E5E5;
   color: #222222;
 }
+
+.pagination {
+  color: #222222;
+  /*  display: flex;
+   justify-content: space-between;
+
+   &:not(:last-child), &:not(:first-child)
+   {
+       display: inline-block;      
+   } */
+}
+.pagination .page-item .page-link {
+  color: brown;
+}
