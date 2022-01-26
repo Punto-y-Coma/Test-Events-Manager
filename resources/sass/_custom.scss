@@ -1,0 +1,16 @@
+/* Selected text */
+::selection {
+    background          : $first-color;
+    color               : $second-color;
+}
+
+header a {
+    color               : $first-color;
+    text-decoration     : none;
+
+    h1 {
+        font-size       : 2rem;
+        text-transform  : uppercase;
+    }
+
+}
