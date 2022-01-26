@@ -1,4 +1,4 @@
-<a href="/" class="brand">
+<a href="{{ url('/home') }}" class="brand">
     <h1>Factoría Masterclasses</h1>
 </a>
 
