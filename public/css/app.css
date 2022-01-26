@@ -11406,6 +11406,25 @@ body header, body footer {
   color: #E5E5E5;
   height: 4rem;
 }
+body footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+body footer #social-media-links {
+  display: flex;
+  flex-direction: row;
+}
+body footer svg {
+  margin: 0 0.5rem 0 0.5rem;
+}
+body footer p {
+  margin: 0 0.5rem 0 0.5rem;
+}
 
 /* Selected text */
 ::-moz-selection {
