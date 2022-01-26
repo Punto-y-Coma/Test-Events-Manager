@@ -1,11 +1,11 @@
 body {
-    background      : $first-color;
-    color           : $second-color;
-    line-height     : $line-height-base;
+    background          : $first-color;
+    color               : $second-color;
+    line-height         : $line-height-base;
 
     header, footer {
-        background  : $second-color;
-        color       : $first-color;
-        height      : 4rem;
+        background      : $second-color;
+        color           : $first-color;
+        padding         : 2rem;
     }
 }

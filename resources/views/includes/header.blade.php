@@ -1,9 +1,9 @@
-<a href="/">
+<a href="/" class="brand">
     <h1>Factoría Masterclasses</h1>
 </a>
 
 @if (Route::has('login'))
-    <div class="hidden px-6 py-4 sm:block">
+    <div class="hidden sm:block navigation">
         @auth
             <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
         @else

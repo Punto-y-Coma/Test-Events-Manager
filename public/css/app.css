@@ -11404,7 +11404,7 @@ body {
 body header, body footer {
   background: #222222;
   color: #E5E5E5;
-  height: 4rem;
+  padding: 2rem;
 }
 
 /* Selected text */
@@ -11418,10 +11418,20 @@ body header, body footer {
 }
 
 header a {
-  color: #E5E5E5;
   text-decoration: none;
 }
-header a h1, header a .h1 {
+header .brand h1, header .brand .h1 {
   font-size: 2rem;
   text-transform: uppercase;
+}
+header .navigation a {
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 0.2rem 0.8rem;
+}
+header .navigation :last-child {
+  background: #E5E5E5;
+  color: #222222;
 }
