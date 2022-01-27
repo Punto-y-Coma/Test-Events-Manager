@@ -15,7 +15,7 @@
         </div>
 
         <footer>
-            @include('includes.footer')
+            <x-footer />
         </footer>
 
     </div>
