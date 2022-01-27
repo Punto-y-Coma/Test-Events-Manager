@@ -36,7 +36,7 @@ header {
         }
 
         a:hover {
-            background      : $first-color;
+            background      : $fourth-color;
             color           : $second-color;
         }
 
@@ -45,8 +45,8 @@ header {
             color           : $second-color;
 
             &:hover {
-                background  : $second-color;
-                color       : $first-color;
+                background  : $fourth-color;
+                color       : $second-color;
             }
         }
     }

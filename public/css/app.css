@@ -11440,7 +11440,7 @@ header .navigation a {
   padding: 0.2rem 0.8rem;
 }
 header .navigation a:hover {
-  background: #E5E5E5;
+  background: #C8EBAD;
   color: #222222;
 }
 header .navigation :last-child {
@@ -11448,6 +11448,6 @@ header .navigation :last-child {
   color: #222222;
 }
 header .navigation :last-child:hover {
-  background: #222222;
-  color: #E5E5E5;
+  background: #C8EBAD;
+  color: #222222;
 }
