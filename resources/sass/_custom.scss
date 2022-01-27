@@ -1,0 +1,53 @@
+/* Selected text */
+::selection {
+    background              : $first-color;
+    color                   : $second-color;
+}
+
+header {
+
+    a {
+        text-decoration     : none;
+    }
+
+    a.brand {
+        padding: 0.5rem;
+
+        &:hover, &:visited {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius   : 10px;
+            color           : $first-color;
+        }
+
+        h1 {
+            font-size       : 2rem;
+            text-transform  : uppercase;
+        }
+    }
+
+    .navigation {
+
+        a {
+            border          : 1px solid $first-color;
+            border-radius   : 10px;
+            display         : inline-block;
+            margin-left     : 1rem;
+            padding         : 0.2rem 0.8rem;
+        }
+
+        a:hover {
+            background      : $first-color;
+            color           : $second-color;
+        }
+
+        :last-child {
+            background      : $first-color;
+            color           : $second-color;
+
+            &:hover {
+                background  : $second-color;
+                color       : $first-color;
+            }
+        }
+    }
+}
