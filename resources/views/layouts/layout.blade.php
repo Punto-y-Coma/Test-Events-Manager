@@ -26,6 +26,8 @@
 
     </div>
 
+    @include('includes.masterclasses-out-date')
+
     <footer class="row">
         @include('includes.footer')
     </footer>
