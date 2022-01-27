@@ -34,5 +34,10 @@
       {!! $masterclasses->links() !!}
     </div>
 
+
+   
+
+
+
 </div>
 @endsection

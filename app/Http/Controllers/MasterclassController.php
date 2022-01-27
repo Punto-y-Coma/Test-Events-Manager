@@ -13,4 +13,17 @@ class MasterclassController extends Controller
 
         return view('pages.home', $datos);
     }
+
+    public function create()
+    {
+        return view('pages.masterclass.create');
+    }
+
+    public function store(Request $request)
+    {
+        $data = request()->all();
+        return response()->json($data);
+
+    }
+
 }
