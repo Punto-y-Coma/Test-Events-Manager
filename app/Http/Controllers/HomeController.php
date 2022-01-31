@@ -25,7 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {    
+        $datos['masterclasses'] = Masterclass::paginate(5);
 
+        return view('pages.home', $datos);
 
     }
 }

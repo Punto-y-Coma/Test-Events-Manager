@@ -17,6 +17,7 @@ class CreateMasterclassesTable extends Migration
             $table->id();
             $table->string('name');
             $table->date('date');
+            $table->time('time');
             $table->integer('vacants');
             $table->longText('description');
             $table->string('image');
