@@ -3,10 +3,9 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Http\Controllers\MasterclassController;
-class CardOutDate extends Component
+
+class Footer extends Component
 {
-    public $title;
     /**
      * Create a new component instance.
      *
@@ -14,7 +13,7 @@ class CardOutDate extends Component
      */
     public function __construct()
     {
-       
+        //
     }
 
     /**
@@ -23,8 +22,7 @@ class CardOutDate extends Component
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
     public function render()
-    {   
-       /*  $masterclasses = $this->masterclasses; */
-        return view('components.card-out-date'/* , compact('masterclasses') */);
+    {
+        return view('components.footer');
     }
 }

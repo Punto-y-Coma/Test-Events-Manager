@@ -22653,6 +22653,33 @@ body header, body footer {
   color: #E5E5E5;
   padding: 1.5rem;
 }
+body hr {
+  display: inline;
+  width: 5px;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #474747;
+  float: rigth;
+  margin: 1em 0;
+  padding: 0;
+}
+body footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+body footer #social-media-links {
+  display: flex;
+  flex-direction: row;
+}
+body footer svg {
+  margin: 0 0.5rem 0 0.5rem;
+}
+body footer p {
+  margin: 0 0.5rem 0 0.5rem;
+}
 
 /* Selected text */
 ::-moz-selection {
@@ -22697,4 +22724,70 @@ header .navigation :last-child {
 header .navigation :last-child:hover {
   background: #222222;
   color: #E5E5E5;
+}
+
+.pagination {
+  color: #222222;
+  /*  display: flex;
+   justify-content: space-between;
+
+   &:not(:last-child), &:not(:first-child)
+   {
+       display: inline-block;      
+   } */
+}
+.pagination .page-item .page-link {
+  color: brown;
+}
+
+.row .card {
+  padding: 0;
+}
+
+#welcome-card .card {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+  overflow: hidden;
+}
+#welcome-card .card .card-img-top, #welcome-card .card .card-img {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+  /*  border-top-left-radius: 15px;
+      border-top-right-radius: 15px; */
+}
+#welcome-card .card .card-subtitle .mb-2 .text-muted {
+  font-family: Roboto;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 19px;
+  line-height: 100%;
+  vertical-align: Top;
+  fill: Solid;
+  color: #bdb5b5;
+}
+#welcome-card .card .card-text {
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 19px;
+  line-height: 100%;
+  text-align: Left;
+  vertical-align: Top;
+  fill: Solid;
+  color: #000000;
+}
+#welcome-card .card .btn .btn-secondary {
+  font-family: Rounded Mplus 1c Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 }

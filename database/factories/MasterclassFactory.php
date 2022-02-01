@@ -16,9 +16,10 @@ class MasterclassFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'date' => $this->faker->date(),
+            'time' => $this->faker->time(),
             'vacants' => $this->faker->numberBetween(1,25),
             'description' => $this->faker->text(),
-            'image' => 'https://loremflickr.com/680/480/dog?random=1',
+            'image' => 'https://picsum.photos/200/100',
         ];
     }
 }

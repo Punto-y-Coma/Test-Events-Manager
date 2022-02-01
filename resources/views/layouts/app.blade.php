@@ -9,15 +9,15 @@
         @include('includes.header')
     </header>
 
-    <div class="container">
-        <div id="main">
+  
+        <div id="main" class="my-5">
             @yield('content')
         </div>
-    </div>
 
-    <footer>
-        @include('includes.footer')
-    </footer>
+        <footer>
+            <x-footer />
+        </footer>
+
 
 </body>
 </html>
