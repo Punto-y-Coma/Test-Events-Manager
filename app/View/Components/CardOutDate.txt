@@ -3,9 +3,10 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-
-class Prueba extends Component
+use App\Http\Controllers\MasterclassController;
+class CardOutDate extends Component
 {
+    public $title;
     /**
      * Create a new component instance.
      *
@@ -13,7 +14,7 @@ class Prueba extends Component
      */
     public function __construct()
     {
-        //
+       
     }
 
     /**
@@ -22,7 +23,8 @@ class Prueba extends Component
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
     public function render()
-    {
-        return view('components.prueba');
+    {   
+       /*  $masterclasses = $this->masterclasses; */
+        return view('components.card-out-date'/* , compact('masterclasses') */);
     }
 }

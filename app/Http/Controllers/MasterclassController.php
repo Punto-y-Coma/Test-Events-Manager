@@ -1,21 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\Masterclass;
 
 class MasterclassController extends Controller
 {
-    public function index()
-{
-    $masterclasses = Masterclass::all();
-    return $masterclasses;
-}
-
-public function destroy(Masterclass $masterclasses)
-{
-    if($masterclasses->delete()){
-        return true;
+    public function index(){
+        return view('welcome');
     }
-}
 }

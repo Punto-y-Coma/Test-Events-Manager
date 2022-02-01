@@ -1,0 +1,49 @@
+@extends('layouts.app')
+<div>
+    <h1>MASTERCLASSES FINALIZADAS</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Vcants</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+        
+      @foreach($masterclasses as $masterclass)
+  
+                <tr>
+                    <td>{{$masterclass->name}}</td>
+                    <td>{{$masterclass->date}}</td>
+                    <td>{{$masterclass->vacants}}</td>
+                    <td>{{$masterclass->description}}</td>
+                    <td>{{$masterclass->image}}</td>
+                </tr>
+
+        @endforeach
+
+    </table>
+</div>
+
+<div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+</div>
+

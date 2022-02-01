@@ -10,11 +10,9 @@
     </header>
 
     <div class="container">
-
         <div id="main">
             @yield('content')
         </div>
-
     </div>
 
     <footer>
