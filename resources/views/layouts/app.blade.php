@@ -15,11 +15,11 @@
             @yield('content')
         </div>
 
-    </div>
+        <footer>
+            <x-footer />
+        </footer>
 
-    <footer>
-        @include('includes.footer')
-    </footer>
+    </div>
 
 </body>
 </html>

@@ -8,4 +8,26 @@ body {
         color           : $first-color;
         padding         : 2rem;
     }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+        #social-media-links {
+            display: flex;
+            flex-direction: row;
+        }
+
+        svg {
+            margin: 0 0.5rem 0 0.5rem;
+        }
+
+        p {
+            margin: 0 0.5rem 0 0.5rem;
+        }
+    }
 }
+
