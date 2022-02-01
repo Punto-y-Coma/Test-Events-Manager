@@ -22668,7 +22668,6 @@ body footer {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 100%;
 }
 body footer #social-media-links {
   display: flex;
@@ -22714,7 +22713,7 @@ header .navigation a {
   padding: 0.2rem 0.8rem;
 }
 header .navigation a:hover {
-  background: #E5E5E5;
+  background: #C8EBAD;
   color: #222222;
 }
 header .navigation :last-child {
@@ -22722,8 +22721,13 @@ header .navigation :last-child {
   color: #222222;
 }
 header .navigation :last-child:hover {
+<<<<<<< HEAD
   background: #222222;
   color: #E5E5E5;
+=======
+  background: #C8EBAD;
+  color: #222222;
+>>>>>>> 35773fddc1178d5851e71ae49e0c3d41a071695e
 }
 
 .pagination {
@@ -22738,6 +22742,7 @@ header .navigation :last-child:hover {
 }
 .pagination .page-item .page-link {
   color: brown;
+<<<<<<< HEAD
 }
 
 .row .card {
@@ -22790,4 +22795,6 @@ header .navigation :last-child:hover {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
+=======
+>>>>>>> 35773fddc1178d5851e71ae49e0c3d41a071695e
 }
