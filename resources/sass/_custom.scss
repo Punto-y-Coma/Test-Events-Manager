@@ -1,0 +1,58 @@
+/* Selected text */
+::selection {
+    background              : $first-color;
+    color                   : $second-color;
+}
+
+header {
+    a {
+        text-decoration     : none;
+    }
+
+    .brand {
+
+        h1 {
+            font-size       : 2rem;
+            text-transform  : uppercase;
+        }
+    }
+
+    .navigation {
+
+        a {
+            border          : 1px solid $first-color;
+            border-radius   : 10px;
+            display         : inline-block;
+            margin-left     : 1rem;
+            padding         : 0.2rem 0.8rem;
+        }
+
+        :last-child {
+            background: $first-color;
+            color: $second-color;
+        }
+    }
+    
+}
+
+.pagination
+{
+    color: $second-color;
+
+   /*  display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child), &:not(:first-child)
+    {
+        display: inline-block;      
+    } */
+
+    .page-item{
+        .page-link{
+            color: brown;
+        }
+    }
+    
+}
+
+

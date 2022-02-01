@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Models\Masterclass;
-
 use Carbon\Carbon;
-
+use App\Models\Masterclass;
 
 class MasterclassController extends Controller
 {
@@ -17,4 +14,32 @@ class MasterclassController extends Controller
 
         return view('welcome', $datos);
     }
+
+    public function create()
+    {
+        return view('pages.masterclass.create');
+    }
+
+    public function store(Request $request)
+    {
+
+        /* d/m/Y  ->  Y-m-d */
+
+        $data = $request->all();
+
+        $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
+
+        $newData = Masterclass::create($data);
+
+        return $this->index();
+
+    }
+
+ /*    public function store(Request $request)
+{
+    $data = $request->all();
+    $data['transaction_date'] = Carbon::createFromFormat('m/d/Y', $request->transaction_date)->format('Y-m-d');
+    $transaction = Transaction::create($data);
+} */
+
 }
