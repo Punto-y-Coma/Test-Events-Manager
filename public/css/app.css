@@ -11404,7 +11404,7 @@ body {
 body header, body footer {
   background: #222222;
   color: #E5E5E5;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 body footer {
   display: flex;
@@ -11437,7 +11437,15 @@ body footer p {
 header a {
   text-decoration: none;
 }
-header .brand h1, header .brand .h1 {
+header a.brand {
+  padding: 0.5rem;
+}
+header a.brand:hover, header a.brand:visited {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  color: #E5E5E5;
+}
+header a.brand h1, header a.brand .h1 {
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -11448,10 +11456,15 @@ header .navigation a {
   margin-left: 1rem;
   padding: 0.2rem 0.8rem;
 }
+header .navigation a:hover {
+  background: #C8EBAD;
+  color: #222222;
+}
 header .navigation :last-child {
   background: #E5E5E5;
   color: #222222;
 }
+<<<<<<< HEAD
 
 .pagination {
   color: #222222;
@@ -11465,4 +11478,9 @@ header .navigation :last-child {
 }
 .pagination .page-item .page-link {
   color: brown;
+=======
+header .navigation :last-child:hover {
+  background: #C8EBAD;
+  color: #222222;
+>>>>>>> feature/header-test
 }

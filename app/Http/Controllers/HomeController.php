@@ -27,7 +27,11 @@ class HomeController extends Controller
     {    
         $datos['masterclasses'] = Masterclass::paginate(5);
 
-        return view('pages.home', $datos);
-
+        if (auth()->user()->is_admin === 1) {
+            return view('pages.admin', $datos);
+        }
+        else {
+            return view('pages.home', $datos);
+        }
     }
 }
