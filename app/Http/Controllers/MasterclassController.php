@@ -9,9 +9,9 @@ class MasterclassController extends Controller
 {
     public function index()
     {
-        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6);
-        $datos_finalizadas['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3);
-        return view('welcome', $datos, $datos_finalizadas);
+        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
+        $datos2['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
+        return view('welcome', $datos, $datos2);
     }
 
     public function create()
