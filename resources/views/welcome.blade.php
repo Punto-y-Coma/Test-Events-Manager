@@ -5,17 +5,16 @@
   <div class="container">
 
     <div>
-      <h1 class="display-6 mb-5">MASTERCLASES DISPONIBLES</h1>
-      <hr/>
+      <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES DISPONIBLES</span></h1>
     </div>
 {{-- 
     <table class="table table-light">
 
         <tbody id="welcome-card"> --}}
 
-          <div class="container">
-            <div class="row">
-
+          <div class="container cards-container">
+            <div class="row justify-content-evenly gap-5">
+        
               @foreach ($masterclasses as $masterclass)            {{-- @if ($masterclass->date > date("Y-m-d")) --}}
               <x-card component 
                 :name="$masterclass->name"
@@ -27,7 +26,7 @@
               />
               {{-- @endif --}}
               @endforeach   
-
+        
             </div>
           </div>
 
@@ -43,16 +42,15 @@
   <div class="container">
 
     <div>
-      <h1 class="display-6 my-5">MASTERCLASES FINALIZADAS</h1>
-      <hr class=""/>
+      <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
     </div>
 
   {{--   <table class="table table-light">
 
       <tbody id="end-card"> --}}
 
-        <div class="container">
-          <div class="row">
+        <div class="container cards-container">
+          <div class="row justify-content-evenly gap-5">
 
             @foreach ($masterclasses_out_date as $masterclass)            {{-- @if ($masterclass->date > date("Y-m-d")) --}}
             <x-card-old component 

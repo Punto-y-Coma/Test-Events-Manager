@@ -53,10 +53,34 @@ header {
     
 }
 
-.pagination
-{
-    color: $second-color;
+.section-title {
+    border-bottom: 1px solid $second-color; 
+    font-size               : 2rem;
+    font-weight             : 100;
+    line-height             : 0.1em;
+    letter-spacing          : 0.15rem;
+    word-spacing            : 0.4rem;
+    margin                  : 6rem 0 0 0; 
+    width                   : 100%; 
 
+    .section-title-line {
+        background          : $first-color;
+        padding             : 0 10px 0 0; 
+    }
+}
+
+.cards-container {
+    margin-top              : 6rem;
+}
+
+
+.row {
+    .card {
+        padding             : 0;
+    }
+}
+
+.pagination {
    /*  display: flex;
     justify-content: space-between;
 
@@ -65,16 +89,18 @@ header {
         display: inline-block;      
     } */
 
-    .page-item{
-        .page-link{
-            color: brown;
+    .page-item {
+        .page-link {
+            color           : $second-color;
+        }
+    }
+
+    .page-item.active {
+        .page-link {
+            background-color: $third-color;
+            border-color    : $third-color;
+            color           : $first-color !important;
         }
     }
     
-}
-
-.row {
-    .card {
-        padding:0;
-    }
 }
