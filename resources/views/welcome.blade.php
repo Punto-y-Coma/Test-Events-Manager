@@ -55,7 +55,7 @@
           <div class="row">
 
             @foreach ($masterclasses_out_date as $masterclass)            {{-- @if ($masterclass->date > date("Y-m-d")) --}}
-            <x-card component 
+            <x-card-old component 
             :name="$masterclass->name"
             :date="$masterclass->date"
             :time="$masterclass->time"
