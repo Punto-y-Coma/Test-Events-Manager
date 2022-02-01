@@ -11411,7 +11411,6 @@ body footer {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 100%;
 }
 body footer #social-media-links {
   display: flex;
@@ -11464,7 +11463,10 @@ header .navigation :last-child {
   background: #E5E5E5;
   color: #222222;
 }
-<<<<<<< HEAD
+header .navigation :last-child:hover {
+  background: #C8EBAD;
+  color: #222222;
+}
 
 .pagination {
   color: #222222;
@@ -11478,9 +11480,4 @@ header .navigation :last-child {
 }
 .pagination .page-item .page-link {
   color: brown;
-=======
-header .navigation :last-child:hover {
-  background: #C8EBAD;
-  color: #222222;
->>>>>>> feature/header-test
 }

@@ -9,17 +9,13 @@
         <x-header/>
     </header>
 
-    <div class="container">
+    <div id="main">
+        @yield('content')
+    </div>  
 
-        <div id="main">
-            @yield('content')
-        </div>
-
-        <footer>
-            <x-footer />
-        </footer>
-
-    </div>
+    <footer>
+        <x-footer />
+    </footer>
 
 </body>
 </html>
