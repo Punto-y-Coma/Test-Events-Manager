@@ -1,21 +1,33 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        @include('includes.head')
-    </head>
-    <body class="antialiased">
-        <div class="container relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            <header>
-                @include('includes.header')
-            </header>
+@extends('layouts.app')
 
-            <main id="main">
-                Main
-            </main>
+@section('content')
+<div class="container">
 
-            <footer>
-                Footer
-            </footer>
-        </div>
-    </body>
-</html>
+    <H1>WELCOME</H1>
+
+    <table class="table table-light">
+
+        <tbody id="welcome-card">
+        
+            @foreach ($masterclasses as $masterclass)            {{-- @if ($masterclass->date > date("Y-m-d")) --}}
+            <x-card component 
+            :name="$masterclass->name"
+            :date="$masterclass->date"
+            :time="$masterclass->time"
+            :vacants="$masterclass->vacants"
+            :description="$masterclass->description"
+            :image="$masterclass->image"
+            />
+            {{-- @endif --}}
+            @endforeach   
+
+        </tbody>
+        
+    </table>
+
+    <div class="d-flex justify-content-end">
+      {!! $masterclasses->links() !!}
+    </div>
+
+</div>
+@endsection

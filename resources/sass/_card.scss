@@ -1,0 +1,51 @@
+#welcome-card {
+
+    .card {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 29px;
+        color: #000000;
+    }
+
+    .card-img-top {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 29px;
+        color: #000000;
+    }
+
+    .card-subtitle mb-2 text-muted {
+        font-family: Roboto;
+        font-style: regular;
+        font-size: 16px;
+        line-height: 19px;
+        line-height: 100%;
+        vertical-align: Top;
+        fill: Solid;
+        color: #bdb5b5;
+    }
+
+    .card-text {
+        font-family: Roboto;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 19px;
+        line-height: 100%;
+        text-align: Left;
+        vertical-align: Top;
+        fill: Solid;
+        color: #000000;
+    }
+
+    .btn btn-secondary {
+        font-family: Rounded Mplus 1c Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
