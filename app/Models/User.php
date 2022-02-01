@@ -47,4 +47,8 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(User::class);
     }
+
+    public function isAdmin() {
+        return $this->boolean('is_admin');
+    }
 }

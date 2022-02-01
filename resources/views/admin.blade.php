@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Mi perfil') }}</div>
+                <div class="card-header">{{ __('Admin dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,11 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You can see the masterclasses in which you have registered!') }}
-                    <div class="card-body">
-                        <h4>Hola, {{ auth()->user()->name }} </h4>
-                        <p>{{ auth()->user()->is_admin }}</p>
-                     </div>
+                    {{ __('You can edit masterclasses!') }}
                 </div>
             </div>
         </div>
