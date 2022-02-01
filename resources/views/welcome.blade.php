@@ -7,9 +7,8 @@
     <div>
       <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES DISPONIBLES</span></h1>
     </div>
-{{-- 
+    {{-- 
     <table class="table table-light">
-
         <tbody id="welcome-card"> --}}
 
           <div class="container cards-container">
@@ -45,8 +44,7 @@
       <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
     </div>
 
-  {{--   <table class="table table-light">
-
+    {{--   <table class="table table-light">
       <tbody id="end-card"> --}}
 
         <div class="container cards-container">
@@ -67,7 +65,7 @@
           </div>
         </div>
 
-    {{--   </tbody>
+      {{--   </tbody>
           
     </table> --}}
 
@@ -76,7 +74,11 @@
     </div>
 
   </div>
-</div>
+  <div>
 
+    @include('pages.nextClasses');
+    @include('pages.previousClasses');
+
+  </div>
 
 @endsection
