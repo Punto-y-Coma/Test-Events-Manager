@@ -22775,48 +22775,48 @@ header .navigation :last-child:hover {
   color: #E5E5E5 !important;
 }
 
-.card {
+.cards-section .card {
   background: #FFFFFF;
   border: 1px solid #6C757D;
   border-radius: 15px;
   margin-bottom: 4rem;
   width: 25rem;
 }
-.card img, .card .card-img-top {
+.cards-section .card img, .cards-section .card .card-img-top {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card .card-body {
+.cards-section .card .card-body {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
 }
-.card .card-body > *:not(:first-child) {
+.cards-section .card .card-body > *:not(:first-child) {
   margin-top: 0.6rem;
 }
-.card .card-body .card-title {
+.cards-section .card .card-body .card-title {
   font-weight: bold;
   font-size: 2rem;
 }
-.card .card-body .card-subtitle .mb-2 .text-muted {
+.cards-section .card .card-body .card-subtitle .mb-2 .text-muted {
   vertical-align: top;
   fill: solid;
   color: rgba(229, 229, 229, 0.5);
 }
-.card .card-body .card-date-time {
+.cards-section .card .card-body .card-date-time {
   display: flex;
   justify-content: space-between;
 }
-.card .card-body .card-text {
+.cards-section .card .card-body .card-text {
   color: #222222;
   flex-grow: 1;
 }
-.card .card-body .card-btns {
+.cards-section .card .card-body .card-btns {
   text-align: center;
 }
-.card .card-body .card-btns .btn {
+.cards-section .card .card-body .card-btns .btn {
   color: #E5E5E5;
   font-weight: bold;
   margin: 1rem;

@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container cards-section">
 
   <div>
     <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
@@ -26,4 +26,4 @@
     {!! $masterclasses_out_date->appends(['masterclasses' => $masterclasses->currentPage()])->links() !!}
   </div>
 
-</div>
+</section>

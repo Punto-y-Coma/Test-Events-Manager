@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container cards-section">
 
   <div>
     <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES DISPONIBLES</span></h1>
@@ -9,12 +9,12 @@
 
       @foreach ($masterclasses as $masterclass)            
       <x-card component 
-        :name="$masterclass->name"
-        :date="$masterclass->date"
-        :time="$masterclass->time"
-        :vacants="$masterclass->vacants"
-        :description="$masterclass->description"
-        :image="$masterclass->image"
+      :name="$masterclass->name"
+      :date="$masterclass->date"
+      :time="$masterclass->time"
+      :vacants="$masterclass->vacants"
+      :description="$masterclass->description"
+      :image="$masterclass->image"
       />
 
       @endforeach   
@@ -26,4 +26,4 @@
     {!! $masterclasses->appends(['masterclasses_out_date' => $masterclasses_out_date->currentPage()])->links() !!}
   </div>
 
-</div>
+</section>
