@@ -1,30 +1,29 @@
-<div class="container">
+<section class="container cards-section">
 
-    <div>
-      <h1 class="display-6 my-5">MASTERCLASES FINALIZADAS</h1>
-      <hr class=""/>
+  <div>
+    <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
+  </div>
+
+  <div class="container cards-container">
+    <div class="row justify-content-evenly gap-5">
+
+      @foreach ($masterclasses_out_date as $masterclass)            
+      <x-card-old component 
+      :name="$masterclass->name"
+      :date="$masterclass->date"
+      :time="$masterclass->time"
+      :vacants="$masterclass->vacants"
+      :description="$masterclass->description"
+      :image="$masterclass->image"
+      />
+
+      @endforeach   
+
     </div>
+  </div>
 
-        <div class="container">
-          <div class="row">
+  <div class="d-flex justify-content-end">
+    {!! $masterclasses_out_date->appends(['masterclasses' => $masterclasses->currentPage()])->links() !!}
+  </div>
 
-            @foreach ($masterclasses_out_date as $masterclass)            {{-- @if ($masterclass->date > date("Y-m-d")) --}}
-            <x-card-old component 
-            :name="$masterclass->name"
-            :date="$masterclass->date"
-            :time="$masterclass->time"
-            :vacants="$masterclass->vacants"
-            :description="$masterclass->description"
-            :image="$masterclass->image"
-            />
-            {{-- @endif --}}
-            @endforeach   
-
-          </div>
-        </div>
-
-    <div class="d-flex justify-content-end">
-      {!! $masterclasses_out_date->appends(['masterclasses' => $masterclasses->currentPage()])->links() !!}
-    </div>
-
-</div>
+</section>

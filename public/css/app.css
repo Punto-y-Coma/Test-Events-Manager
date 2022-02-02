@@ -22680,6 +22680,15 @@ body footer p {
   margin: 0 0.5rem 0 0.5rem;
 }
 
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header > * {
+    margin: 0.5rem;
+  }
+}
 /* Selected text */
 ::-moz-selection {
   background: #E5E5E5;
@@ -22697,7 +22706,7 @@ header a.brand {
   padding: 0.5rem;
 }
 header a.brand:hover, header a.brand:visited {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   color: #E5E5E5;
 }
@@ -22725,24 +22734,66 @@ header .navigation :last-child:hover {
   color: #222222;
 }
 
-.pagination {
-  color: #222222;
-  /*  display: flex;
-   justify-content: space-between;
-
-   &:not(:last-child), &:not(:first-child)
-   {
-       display: inline-block;      
-   } */
+.section-title {
+  border-bottom: 1px solid #222222;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 0.1em;
+  letter-spacing: 0.15rem;
+  word-spacing: 0.4rem;
+  margin: 6rem auto 0 auto;
+  width: 100%;
 }
+<<<<<<< HEAD
 .pagination .page-item .page-link {
   color: brown;
+=======
+.section-title .section-title-line {
+  background: #E5E5E5;
+  padding: 0 10px 0 0;
+}
+
+.cards-container {
+  margin-top: 6rem;
+}
+
+.create-container {
+  margin: 0 auto;
+}
+.create-container div {
+  margin: 0 auto;
+  width: 20rem;
+}
+.create-container div .form-control, .create-container div .gj-datepicker-bootstrap [role=right-icon] button, .create-container div .border {
+  border: 1px solid #6C757D !important;
+}
+.create-container div .form-control:focus, .create-container div .gj-datepicker-bootstrap [role=right-icon] button:focus, .create-container div .border:focus {
+  border-color: #C8EBAD;
+  box-shadow: 0 0 0 0.25rem rgba(72, 160, 6, 0.8);
+}
+.create-container div .btn-primary {
+  background-color: #C8EBAD;
+  border-color: #6C757D;
+  color: #6C757D;
+}
+.create-container div .btn-primary:not(:disabled):not(.disabled).active, .create-container div .btn-primary:not(:disabled):not(.disabled):active, .create-container div .show > .btn-primary.dropdown-toggle {
+  color: #E5E5E5;
+  background-color: #50A111;
+  border-color: #6C757D;
+}
+.create-container div .btn-primary:not(:disabled):not(.disabled).active:focus,
+.create-container div .show > .btn-primary.dropdown-toggle:focus,
+.create-container div .btn-check:focus + .btn-primary,
+.create-container div .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 160, 6, 0.8) !important;
+>>>>>>> 32f87f16cab4c99dbceeddc5eea300df08ecebc4
 }
 
 .row .card {
   padding: 0;
 }
 
+<<<<<<< HEAD
 .btn-custom {
   border-style: none;
   color: #222222;
@@ -22820,4 +22871,62 @@ header .navigation :last-child:hover {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
+=======
+.pagination .page-item .page-link {
+  color: #222222;
+}
+.pagination .page-item.active .page-link {
+  background-color: #6C757D;
+  border-color: #6C757D;
+  color: #E5E5E5 !important;
+}
+
+.cards-section .card {
+  background: #FFFFFF;
+  border: 1px solid #6C757D;
+  border-radius: 15px;
+  margin-bottom: 4rem;
+  width: 25rem;
+}
+.cards-section .card img, .cards-section .card .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards-section .card .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.cards-section .card .card-body > *:not(:first-child) {
+  margin-top: 0.6rem;
+}
+.cards-section .card .card-body .card-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.cards-section .card .card-body .card-subtitle .mb-2 .text-muted {
+  vertical-align: top;
+  fill: solid;
+  color: rgba(229, 229, 229, 0.5);
+}
+.cards-section .card .card-body .card-date-time {
+  display: flex;
+  justify-content: space-between;
+}
+.cards-section .card .card-body .card-text {
+  color: #222222;
+  flex-grow: 1;
+}
+.cards-section .card .card-body .card-btns {
+  text-align: center;
+}
+.cards-section .card .card-body .card-btns .btn {
+  color: #E5E5E5;
+  font-weight: bold;
+  margin: 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+>>>>>>> 32f87f16cab4c99dbceeddc5eea300df08ecebc4
 }

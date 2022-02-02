@@ -2,8 +2,8 @@
 
 @section('content')
 
-  <div class="container">
-    
+  <div>
+
     @include('pages.nextClasses');
     @include('pages.previousClasses');
 

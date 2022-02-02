@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
 
-    <h1>HOME</h1>
+    <h2>Mis masterclasses</h2>
+    <h4>Hola, {{ auth()->user()->name }} </h4>
 
     <table class="table table-light">
 
@@ -35,11 +36,5 @@
     <div class="d-flex justify-content-end">
       {!! $masterclasses->links() !!}
     </div>
-
-
-   
-
-
-
 </div>
 @endsection
