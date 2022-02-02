@@ -22721,13 +22721,8 @@ header .navigation :last-child {
   color: #222222;
 }
 header .navigation :last-child:hover {
-<<<<<<< HEAD
-  background: #222222;
-  color: #E5E5E5;
-=======
   background: #C8EBAD;
   color: #222222;
->>>>>>> 35773fddc1178d5851e71ae49e0c3d41a071695e
 }
 
 .pagination {
@@ -22742,59 +22737,87 @@ header .navigation :last-child:hover {
 }
 .pagination .page-item .page-link {
   color: brown;
-<<<<<<< HEAD
 }
 
 .row .card {
   padding: 0;
 }
 
+.btn-custom {
+  border-style: none;
+  color: #222222;
+}
+.btn-custom:hover, .btn-custom:visited, .btn-custom:focus, .btn-custom:active {
+  color: #222222;
+  border-style: none;
+  box-shadow: none;
+}
+
+.btn-delete {
+  background: #C8EBAD;
+}
+.btn-delete:hover, .btn-delete:active {
+  background-color: #d0f8b2;
+}
+.btn-delete:focus {
+  background-color: #C8EBAD;
+}
+
+.btn-edit {
+  background: #ED7070;
+}
+.btn-edit:hover, .btn-edit:active {
+  background-color: #ff8080;
+}
+.btn-edit:focus {
+  background-color: #ED7070;
+}
+
+.btn-transparent {
+  background: transparent;
+}
+.btn-transparent:hover, .btn-transparent:active {
+  color: #8b949b;
+}
+.btn-transparent:focus {
+  color: #222222;
+}
+.btn-transparent:visited {
+  color: #222222;
+}
+
 #welcome-card .card {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 29px;
   color: #000000;
-  overflow: hidden;
 }
 #welcome-card .card .card-img-top, #welcome-card .card .card-img {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 29px;
-  color: #000000;
-  /*  border-top-left-radius: 15px;
-      border-top-right-radius: 15px; */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #welcome-card .card .card-subtitle .mb-2 .text-muted {
-  font-family: Roboto;
   font-style: regular;
-  font-size: 16px;
   line-height: 19px;
   line-height: 100%;
-  vertical-align: Top;
-  fill: Solid;
+  vertical-align: top;
+  fill: solid;
   color: #bdb5b5;
 }
 #welcome-card .card .card-text {
-  font-family: Roboto;
-  font-style: Regular;
-  font-size: 16px;
+  font-style: regular;
   line-height: 19px;
   line-height: 100%;
-  text-align: Left;
-  vertical-align: Top;
-  fill: Solid;
+  text-align: left;
+  vertical-align: top;
+  fill: solid;
   color: #000000;
 }
 #welcome-card .card .btn .btn-secondary {
-  font-family: Rounded Mplus 1c Bold;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-=======
->>>>>>> 35773fddc1178d5851e71ae49e0c3d41a071695e
 }

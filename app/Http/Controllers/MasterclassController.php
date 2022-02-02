@@ -23,13 +23,9 @@ class MasterclassController extends Controller
     {
 
         /* d/m/Y  ->  Y-m-d */
-
         $data = $request->all();
-
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
-
         $newData = Masterclass::create($data);
-
         return $this->index();
 
     }
