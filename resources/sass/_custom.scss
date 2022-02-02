@@ -60,7 +60,7 @@ header {
     line-height             : 0.1em;
     letter-spacing          : 0.15rem;
     word-spacing            : 0.4rem;
-    margin                  : 6rem 0 0 0; 
+    margin                  : 6rem auto 0 auto; 
     width                   : 100%; 
 
     .section-title-line {
@@ -73,6 +73,42 @@ header {
     margin-top              : 6rem;
 }
 
+.create-container {
+    margin                  : 0 auto;
+
+    div {
+        margin              : 0 auto;
+        width               : 20rem;
+        
+        .form-control, .gj-datepicker-bootstrap [role=right-icon] button, .border {
+            border          : 1px solid $third-color !important;
+
+            &:focus {
+                border-color: $fourth-color;
+                box-shadow  : 0 0 0 0.25rem rgb(72 160 6 / 80%);
+            }          
+        }
+
+        .btn-primary {
+            background-color: $fourth-color;
+            border-color    : $third-color;
+            color           : $third-color;
+        }
+
+        .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+            color           : $first-color;
+            background-color: $fourth-color-dark;
+            border-color    : $third-color;
+        }
+
+        .btn-primary:not(:disabled):not(.disabled).active:focus, 
+        .show>.btn-primary.dropdown-toggle:focus,
+        .btn-check:focus + .btn-primary,
+        .btn-primary:focus {
+            box-shadow      : 0 0 0 0.2rem rgba(72, 160, 6, 0.8) !important;
+        }
+    }
+}
 
 .row {
     .card {
@@ -81,14 +117,6 @@ header {
 }
 
 .pagination {
-   /*  display: flex;
-    justify-content: space-between;
-
-    &:not(:last-child), &:not(:first-child)
-    {
-        display: inline-block;      
-    } */
-
     .page-item {
         .page-link {
             color           : $second-color;

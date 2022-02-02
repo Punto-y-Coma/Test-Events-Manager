@@ -22741,7 +22741,7 @@ header .navigation :last-child:hover {
   line-height: 0.1em;
   letter-spacing: 0.15rem;
   word-spacing: 0.4rem;
-  margin: 6rem 0 0 0;
+  margin: 6rem auto 0 auto;
   width: 100%;
 }
 .section-title .section-title-line {
@@ -22753,19 +22753,41 @@ header .navigation :last-child:hover {
   margin-top: 6rem;
 }
 
+.create-container {
+  margin: 0 auto;
+}
+.create-container div {
+  margin: 0 auto;
+  width: 20rem;
+}
+.create-container div .form-control, .create-container div .gj-datepicker-bootstrap [role=right-icon] button, .create-container div .border {
+  border: 1px solid #6C757D !important;
+}
+.create-container div .form-control:focus, .create-container div .gj-datepicker-bootstrap [role=right-icon] button:focus, .create-container div .border:focus {
+  border-color: #C8EBAD;
+  box-shadow: 0 0 0 0.25rem rgba(72, 160, 6, 0.8);
+}
+.create-container div .btn-primary {
+  background-color: #C8EBAD;
+  border-color: #6C757D;
+  color: #6C757D;
+}
+.create-container div .btn-primary:not(:disabled):not(.disabled).active, .create-container div .btn-primary:not(:disabled):not(.disabled):active, .create-container div .show > .btn-primary.dropdown-toggle {
+  color: #E5E5E5;
+  background-color: #50A111;
+  border-color: #6C757D;
+}
+.create-container div .btn-primary:not(:disabled):not(.disabled).active:focus,
+.create-container div .show > .btn-primary.dropdown-toggle:focus,
+.create-container div .btn-check:focus + .btn-primary,
+.create-container div .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 160, 6, 0.8) !important;
+}
+
 .row .card {
   padding: 0;
 }
 
-.pagination {
-  /*  display: flex;
-   justify-content: space-between;
-
-   &:not(:last-child), &:not(:first-child)
-   {
-       display: inline-block;      
-   } */
-}
 .pagination .page-item .page-link {
   color: #222222;
 }
