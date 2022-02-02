@@ -22706,7 +22706,7 @@ header a.brand {
   padding: 0.5rem;
 }
 header a.brand:hover, header a.brand:visited {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   color: #E5E5E5;
 }
