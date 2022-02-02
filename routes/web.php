@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\MasterclassController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MasterclassController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,3 @@ CON EL MÉTODO RESOURCE YA SE TIENE ACCESO A TODOS LOS MÉTODOS DEL CONTROLADOR 
 */
 
 Route::resource('/pages/masterclass',MasterclassController::class);
-

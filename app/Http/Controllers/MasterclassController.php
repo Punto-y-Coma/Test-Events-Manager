@@ -1,20 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Models\Masterclass;
 use Carbon\Carbon;
+use App\Models\Masterclass;
 
 class MasterclassController extends Controller
 {
     public function index()
     {
-        $data1['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(2, ['*'], 'masterclasses');
-
-        $data2['masterclasses2'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(2, ['*'], 'masterclasses2');
-
-        return view('welcome', $data1, $data2);
+        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
+        $datos2['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
+        return view('welcome', $datos, $datos2);
     }
 
     public function create()

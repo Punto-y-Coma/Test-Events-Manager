@@ -6,6 +6,49 @@ body {
     header, footer {
         background      : $second-color;
         color           : $first-color;
-        padding         : 2rem;
+        padding         : 1.5rem;
     }
+
+
+    hr {
+        display: inline;
+        width: 5px;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid rgb(71, 71, 71);
+        float: rigth;
+        margin: 1em 0;
+        padding: 0;
+    }
+     
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        #social-media-links {
+            display: flex;
+            flex-direction: row;
+        }
+
+        svg {
+            margin: 0 0.5rem 0 0.5rem;
+        }
+
+        p {
+            margin: 0 0.5rem 0 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+  header {
+      display: flex;
+      flex-direction: column;
+
+      > * {
+          margin: 0.5rem;
+      }
+  }  
 }

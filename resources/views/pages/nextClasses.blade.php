@@ -1,34 +1,29 @@
-<table class="table table-light">
+<section class="container cards-section">
 
-    <thead class="thead-light">
-        <tr>
-            <th>#</th>
-            <th>Curso</th>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Plazas</th>
-            <th>Descripción</th>
-            <th>Imagen</th>
-        </tr>
-    </thead>
+  <div>
+    <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES DISPONIBLES</span></h1>
+  </div>
 
-    <tbody>
-        @foreach ($masterclasses as $masterclass)
-        <tr>
-            <td>{{ $masterclass->id }}</td>
-            <td>{{ $masterclass->name }}</td>
-            <td>{{ $masterclass->date }}</td>
-            <td>{{ $masterclass->time }}</td>
-            <td>{{ $masterclass->vacants }}</td>
-            <td>{{ $masterclass->description }}</td> 
-            <td><img src="{{ $masterclass->image }}" alt="">{{ $masterclass->image }}</td> 
-        </tr>
-        @endforeach                      
-    </tbody>
-</table>
+  <div class="container cards-container">
+    <div class="row justify-content-evenly gap-5">
 
-<div class="d-flex justify-content-end">
-    {!! $masterclasses->appends(['masterclasses2' => $masterclasses2->currentPage()])->links() !!}
-</div>
+      @foreach ($masterclasses as $masterclass)            
+      <x-card component 
+      :name="$masterclass->name"
+      :date="$masterclass->date"
+      :time="$masterclass->time"
+      :vacants="$masterclass->vacants"
+      :description="$masterclass->description"
+      :image="$masterclass->image"
+      />
 
+      @endforeach   
 
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    {!! $masterclasses->appends(['masterclasses_out_date' => $masterclasses_out_date->currentPage()])->links() !!}
+  </div>
+
+</section>

@@ -6,19 +6,15 @@
 <body>
     
     <header class="d-flex justify-content-between align-items-center">
-        @include('includes.header')
+        <x-header/>
     </header>
 
-    <div class="container">
-
-        <div id="main">
-            @yield('content')
-        </div>
-
+    <div id="main" class="my-5">
+        @yield('content')
     </div>
 
     <footer>
-        @include('includes.footer')
+        <x-footer />
     </footer>
 
 </body>

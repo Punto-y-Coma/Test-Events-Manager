@@ -2,17 +2,11 @@
 
 @section('content')
 
-<div class="container">
+  <div>
 
-    <H1>WELCOME</H1>
+    @include('pages.nextClasses');
+    @include('pages.previousClasses');
 
-    <div class="container">
+  </div>
 
-        @include('pages.nextClasses')
-
-        @include('pages.previousClasses')
-
-    </div>
-
-</div>
 @endsection
