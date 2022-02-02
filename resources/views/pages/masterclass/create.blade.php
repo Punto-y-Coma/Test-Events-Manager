@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 <div style="width:300px">
 <form action="{{ route('masterclass.store') }}" method="post" enctype="multipart/form-data">
 @csrf
