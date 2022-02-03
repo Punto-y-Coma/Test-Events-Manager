@@ -4,8 +4,9 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Card extends Component
+class CardInteractive extends Component
 {
+    public $id;
     public $name;
     public $date;
     public $time;
@@ -13,15 +14,15 @@ class Card extends Component
     public $description;
     public $image;
     public $featured;
-    public $id;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $date, $time, $vacants, $description, $image, $featured, $id)
+    public function __construct($id, $name, $date, $time, $vacants, $description, $image, $featured)
     {
+        $this->id = $id;
         $this->name = $name;
         $this->date = $date;
         $this->time = $time;
@@ -29,9 +30,7 @@ class Card extends Component
         $this->description = $description;
         $this->image = $image;
         $this->featured = $featured;
-        $this->id = $id;
     }
-
     /**
      * Get the view / contents that represent the component.
      *
@@ -39,6 +38,6 @@ class Card extends Component
      */
     public function render()
     {
-        return view('components.card');
+        return view('components.card-interactive');
     }
 }

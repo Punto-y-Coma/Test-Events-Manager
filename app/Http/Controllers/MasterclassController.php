@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Masterclass;
+use Illuminate\Support\Facades\Auth;
 
 class MasterclassController extends Controller
 {
     public function index()
     {
-        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6);
-        $datos_finalizadas['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3);
-        return view('welcome', $datos, $datos_finalizadas);
+        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
+        $datos2['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
+        return view('welcome', $datos, $datos2);
     }
 
     public function create()
@@ -23,22 +24,22 @@ class MasterclassController extends Controller
     {
 
         /* d/m/Y  ->  Y-m-d */
-
         $data = $request->all();
-
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
-
         $newData = Masterclass::create($data);
-
         return $this->index();
-
     }
 
- /*    public function store(Request $request)
-{
-    $data = $request->all();
-    $data['transaction_date'] = Carbon::createFromFormat('m/d/Y', $request->transaction_date)->format('Y-m-d');
-    $transaction = Transaction::create($data);
-} */
+    public function subscribe($id)
+    {
+        $masterclass = Masterclass::find($id);
 
+        Masterclass::addToPivotTable($masterclass);
+
+        return redirect('home');
+
+        //status 302
+    }
+
+    
 }

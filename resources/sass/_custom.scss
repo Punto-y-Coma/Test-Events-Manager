@@ -4,77 +4,85 @@
     color                   : $second-color;
 }
 
-header {
+.section-title {
+    border-bottom           : 1px solid $second-color; 
+    font-size               : 2rem;
+    font-weight             : 100;
+    text-transform          : uppercase;
+    line-height             : 0.1em;
+    letter-spacing          : 0.15rem;
+    word-spacing            : 0.4rem;
+    margin                  : 6rem auto 0 auto; 
+    width                   : 100%; 
 
-    a {
-        text-decoration     : none;
+    .section-title-line {
+        background          : $first-color;
+        padding             : 0 10px 0 0; 
     }
+}
 
-    a.brand {
-        padding: 0.5rem;
+.welcome-user-title {
+    font-size               : 1.5rem;
+    margin                  : 0 0 2rem 0;
+}
 
-        &:hover, &:visited {
-            background-color: rgba(255, 255, 255, 0.6);
-            border-radius   : 10px;
-            color           : $first-color;
-        }
+/* Forms */
+.form-control {
+    border                  : 1px solid $third-color !important;
 
-        h1 {
-            font-size       : 2rem;
-            text-transform  : uppercase;
-        }
+    &:active, &:focus {
+        border-color        : $fourth-color;
+        box-shadow          : 0 0 0 0.25rem rgb(72 160 6 / 80%);
     }
+}
 
-    .navigation {
+/* Btns */
 
-        a {
-            border          : 1px solid $first-color;
-            border-radius   : 10px;
-            display         : inline-block;
-            margin-left     : 1rem;
-            padding         : 0.2rem 0.8rem;
-        }
+.btn-check:focus + .btn, .btn:focus {
+    border-color            : $fourth-color;
+    box-shadow              : 0 0 0 0.25rem rgb(72 160 6 / 80%);
+}
 
-        a:hover {
-            background      : $fourth-color;
+.btn-primary {
+    background-color        : $fourth-color;
+    border-color            : $third-color;
+    color                   : $third-color;
+
+    &:hover, &:focus {
+        color               : $first-color;
+        background-color    : $fourth-color-dark;
+        border-color        : $third-color;
+    }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color                   : $first-color;
+    background-color        : $fourth-color-dark;
+    border-color            : $third-color;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, 
+.show>.btn-primary.dropdown-toggle:focus,
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+    box-shadow              : 0 0 0 0.2rem rgba(72, 160, 6, 0.8) !important;
+}
+
+/* Pagination */
+
+.pagination {
+    .page-item {
+        .page-link {
             color           : $second-color;
         }
+    }
 
-        :last-child {
-            background      : $first-color;
-            color           : $second-color;
-
-            &:hover {
-                background  : $fourth-color;
-                color       : $second-color;
-            }
+    .page-item.active {
+        .page-link {
+            background-color: $third-color;
+            border-color    : $third-color;
+            color           : $first-color !important;
         }
     }
     
-}
-
-.pagination
-{
-    color: $second-color;
-
-   /*  display: flex;
-    justify-content: space-between;
-
-    &:not(:last-child), &:not(:first-child)
-    {
-        display: inline-block;      
-    } */
-
-    .page-item{
-        .page-link{
-            color: brown;
-        }
-    }
-    
-}
-
-.row {
-    .card {
-        padding:0;
-    }
 }

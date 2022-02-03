@@ -1,23 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('includes.head')
+    <x-head />
 </head>
 <body>
-    
-    <header class="d-flex justify-content-between align-items-center">
+    <div id="app">
+
         <x-header/>
-    </header>
 
-  
-        <div id="main" class="my-5">
+        <main class="py-4">
             @yield('content')
-        </div>
+        </main>
 
-        <footer>
-            <x-footer />
-        </footer>
+        <x-footer/>
 
-
+    </div>
 </body>
 </html>

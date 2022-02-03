@@ -21,6 +21,7 @@ class CreateMasterclassesTable extends Migration
             $table->integer('vacants');
             $table->longText('description');
             $table->string('image');
+            $table->boolean('featured');
             $table->timestamps();
         });
     }

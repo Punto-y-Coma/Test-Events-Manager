@@ -1,0 +1,17 @@
+.create-container {
+    margin                  : 0 auto;
+
+    div {
+        margin              : 0 auto;
+        width               : 20rem;
+        
+        .form-control  /*, .gj-datepicker-bootstrap [role=right-icon] button, .border */ {
+            border          : 1px solid $third-color !important;
+
+            &:focus {
+                border-color: $fourth-color;
+                box-shadow  : 0 0 0 0.25rem rgb(72 160 6 / 80%);
+            }          
+        }
+    }
+}

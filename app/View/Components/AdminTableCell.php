@@ -4,29 +4,28 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class CardOld extends Component
+class AdminTableCell extends Component
 {
     public $name;
     public $date;
     public $time;
     public $vacants;
     public $description;
-    public $image;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $date, $time, $vacants, $description, $image)
+    public function __construct($name, $date, $time, $vacants, $description)
     {
         $this->name = $name;
         $this->date = $date;
         $this-> time = $time;
         $this-> vacants = $vacants;
         $this-> description = $description;
-        $this-> image = $image;
     }
+
 
     /**
      * Get the view / contents that represent the component.
@@ -35,6 +34,6 @@ class CardOld extends Component
      */
     public function render()
     {
-        return view('components.card-old');
+        return view('components.admin-table-cell');
     }
 }

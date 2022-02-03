@@ -1,6 +1,6 @@
 <x-slider />
 
-@foreach ($masterclasses as $featuredMasterclass)            
+@foreach ($featuredMasterclasses as $featuredMasterclass)            
               <x-slider component 
                 :name="$featuredMasterclass->name"
                 :date="$featuredMasterclass->date"
