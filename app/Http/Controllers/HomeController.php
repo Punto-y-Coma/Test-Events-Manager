@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Masterclass;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -31,7 +32,16 @@ class HomeController extends Controller
             return view('pages.admin', $datos);
         }
         else {
-            return view('pages.home', $datos);
+            // Que queremos hacer:
+            // Listar las masterclasses del usuario logueado
+            // Recuperar usuario logueado
+            // Recuperar eventos de ese usuario
+            // Paginarlos
+            // Devolver a vista home
+            $userEvents['user_events'] = Auth::user()->masterclasses;
+            //dd($userEvents);
+            
+            return view('pages.home', $userEvents);
         }
     }
 }

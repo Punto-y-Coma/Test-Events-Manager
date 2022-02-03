@@ -20,7 +20,7 @@
         </thead>
 
         <tbody>
-            @foreach ($masterclasses as $masterclass)
+            @foreach ($user_events as $masterclass)
             <tr>
                <td>{{ $masterclass->id }}</td>
                <td>{{ $masterclass->name }}</td>
@@ -33,8 +33,8 @@
         </tbody>
     </table>
 
-    <div class="d-flex justify-content-end">
-      {!! $masterclasses->links() !!}
-    </div>
+   {{--  <div class="d-flex justify-content-end">
+      {!! $user_events->links() !!}
+    </div> --}}
 </div>
 @endsection

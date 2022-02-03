@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Masterclass;
+use Illuminate\Support\Facades\Auth;
 
 class MasterclassController extends Controller
 {
@@ -31,14 +32,18 @@ class MasterclassController extends Controller
         $newData = Masterclass::create($data);
 
         return $this->index();
-
     }
 
- /*    public function store(Request $request)
-{
-    $data = $request->all();
-    $data['transaction_date'] = Carbon::createFromFormat('m/d/Y', $request->transaction_date)->format('Y-m-d');
-    $transaction = Transaction::create($data);
-} */
+    public function subscribe($id)
+    {
+        $masterclass = Masterclass::find($id);
 
+        Masterclass::addToPivotTable($masterclass);
+
+        return redirect('home');
+
+        //status 302
+    }
+
+    
 }
