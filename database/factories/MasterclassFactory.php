@@ -20,6 +20,7 @@ class MasterclassFactory extends Factory
             'vacants' => $this->faker->numberBetween(1,25),
             'description' => $this->faker->text(),
             'image' => 'https://picsum.photos/200/100',
+            'featured' => false,
         ];
     }
 }
