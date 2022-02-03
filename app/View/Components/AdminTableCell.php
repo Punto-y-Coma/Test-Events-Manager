@@ -6,7 +6,6 @@ use Illuminate\View\Component;
 
 class AdminTableCell extends Component
 {
-    public $id;
     public $name;
     public $date;
     public $time;
@@ -18,9 +17,8 @@ class AdminTableCell extends Component
      *
      * @return void
      */
-    public function __construct($id, $name, $date, $time, $vacants, $description)
+    public function __construct($name, $date, $time, $vacants, $description)
     {
-        $this->id = $id;
         $this->name = $name;
         $this->date = $date;
         $this-> time = $time;
