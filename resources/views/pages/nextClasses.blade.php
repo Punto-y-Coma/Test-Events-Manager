@@ -6,7 +6,7 @@
     <div class="row justify-content-evenly gap-5">
 
       @foreach ($masterclasses as $masterclass)            
-      <x-card component 
+      <x-card-interactive component 
       :name="$masterclass->name"
       :date="$masterclass->date"
       :time="$masterclass->time"

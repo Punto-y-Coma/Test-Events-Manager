@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class CardOld extends Component
+class CardInteractive extends Component
 {
     public $name;
     public $date;
@@ -27,7 +27,6 @@ class CardOld extends Component
         $this-> description = $description;
         $this-> image = $image;
     }
-
     /**
      * Get the view / contents that represent the component.
      *
@@ -35,6 +34,6 @@ class CardOld extends Component
      */
     public function render()
     {
-        return view('components.card-old');
+        return view('components.card-interactive');
     }
 }
