@@ -22696,21 +22696,48 @@ body {
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-.edit-masterclasses-container .btn-gray {
-  background: #6C757D;
-  padding: 0.85rem 0.95rem;
+.edit-masterclasses-container .btn-add {
+  background: #222222;
+  border-radius: 8px;
+  float: right;
+  max-width: 3rem;
+  max-height: 3rem;
+  margin: 2rem 0;
+  padding: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  width: 2.5rem;
 }
-.edit-masterclasses-container .btn-gray svg {
-  color: white;
+.edit-masterclasses-container .btn-add svg {
+  color: #E5E5E5;
+  margin: 0 auto;
+  width: 1.5rem;
 }
-.edit-masterclasses-container .btn-gray:hover, .edit-masterclasses-container .btn-gray:active {
+.edit-masterclasses-container .btn-add:hover, .edit-masterclasses-container .btn-add:active {
   background: #6C757D;
 }
 .edit-masterclasses-container .edit-masterclasses-table {
   border: 1px solid #6C757D;
 }
+.edit-masterclasses-container .edit-masterclasses-table > :not(:first-child) {
+  border-top: 0;
+}
 .edit-masterclasses-container .edit-masterclasses-table thead {
   background: #6C757D;
+  color: #E5E5E5;
+}
+.edit-masterclasses-container .edit-masterclasses-table thead th:first-child, .edit-masterclasses-container .edit-masterclasses-table thead th:last-child, .edit-masterclasses-container .edit-masterclasses-table thead td:first-child, .edit-masterclasses-container .edit-masterclasses-table thead td:last-child {
+  margin: 0 1rem;
+}
+.edit-masterclasses-container .edit-masterclasses-table tr td:nth-last-child(-n+3) {
+  text-align: center;
+  width: 5rem;
+}
+.edit-masterclasses-container .edit-masterclasses-table .btn-col {
+  text-align: center;
+  width: 5rem;
+}
+.edit-masterclasses-container .edit-masterclasses-table .btn-col svg {
+  display: inline;
 }
 .edit-masterclasses-container .edit-masterclasses-table svg {
   height: 1.1rem;
