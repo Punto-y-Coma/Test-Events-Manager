@@ -21,7 +21,6 @@ class MasterclassController extends Controller
 
     public function store(Request $request)
     {
-
         /* d/m/Y  ->  Y-m-d */
         $data = $request->all();
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
