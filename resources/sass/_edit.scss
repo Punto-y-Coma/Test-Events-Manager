@@ -21,28 +21,41 @@
             background          : $third-color;
         }
 
-        // &:focus {
-        //     background-color: $fourth-color;
-        // }
     }
 
     .edit-masterclasses-table {
         border                  : 1px solid $third-color;
 
         > :not(:first-child) {
-            border-top: 0;
+            border-top          : 0;
         }
 
         thead {
             background          : $third-color;
             color               : $first-color;
-
-            th:first-child, th:last-child, td:first-child, td:last-child {
-                margin          : 0 1rem;
-            }
         }
 
-        tr td:nth-last-child(-n+3) {
+        tr:first-child > td {
+            padding-top         : 1.5rem;
+        }
+
+        tr:last-child > td {
+            padding-bottom      : 1.5rem;
+        }
+
+        tr >:first-child {
+            padding-left        : 1.5rem;
+        }
+
+        tr >:last-child {
+            padding-right       : 1.5rem;
+        }
+
+        td:nth-child(3n) {
+            text-align          : center;
+        }
+
+        td:nth-last-child(-n+3) {
             text-align          : center;
             width               : 5rem;
         }
@@ -84,9 +97,6 @@
                 background-color: #d0f8b2;
             }
         
-            // &:focus {
-            //     background-color: $fourth-color;
-            // }
         }
         
         .btn-delete {
@@ -100,9 +110,6 @@
                 background-color: #ff8080;
             }
         
-            // &:focus {
-            //     background-color: $five-color;
-            // }
         }
         
         .btn-transparent {
