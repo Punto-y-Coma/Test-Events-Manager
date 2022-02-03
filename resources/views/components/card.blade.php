@@ -14,25 +14,6 @@
     <p class="card-text">
       {{ $description }}
     </p>
-  
-    <div class="card-btns">
 
-      @if (Route::has('login'))
-        @auth
-          {{-- Intentar pulir la condicional del if refactorizando--}}
-          @if (Auth::user()->masterclasses->find($id)) 
-          
-            <p>YA ESTÁS SUSCRITO</p>
-
-          @else
-            <a href="{{ route('subscribe', $id) }}" class="btn btn-secondary">Inscríbete</a>
-          @endif
-          
-        @else
-          <a href="{{ route('login') }}" class="btn btn-secondary">Inscríbete</a>
-        @endauth
-      @endif
-
-    </div>
   </div>
 </div>

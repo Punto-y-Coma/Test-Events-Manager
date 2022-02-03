@@ -22765,23 +22765,7 @@ body {
   border-style: none;
   box-shadow: none;
 }
-<<<<<<< HEAD
-
-.btn-gray {
-  background: #6C757D;
-  padding: 0.85rem 0.95rem;
-}
-.btn-gray svg {
-  color: white;
-}
-.btn-gray:hover, .btn-gray:active {
-  background: #222222;
-}
-
-.btn-edit {
-=======
 .edit-masterclasses-container .edit-masterclasses-table .btn-edit {
->>>>>>> feature/edit
   background: #C8EBAD;
 }
 .edit-masterclasses-container .edit-masterclasses-table .btn-edit svg {

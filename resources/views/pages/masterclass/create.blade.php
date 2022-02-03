@@ -11,22 +11,22 @@
         @csrf
 
             <div class="form-floating mb-3 mt-3">
-                <input type="text" class="form-control" id="title" name="name" placeholder="Título de la MasterClass">
+                <input type="text" class="form-control" id="title" name="name" placeholder="Título de la MasterClass" required>
                 <label for="title">Título de la MasterClass</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="datepicker" name="date" placeholder="Fecha">
+                <input type="text" class="form-control" id="datepicker" name="date" placeholder="Fecha" required>
                 <label for="datepicker"></label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="timepicker" name="time" placeholder="Hora de inicio" >
+                <input type="text" class="form-control" id="timepicker" name="time" placeholder="Hora de inicio" required>
                 <label for="timepicker"></label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="plazas" name="vacants" placeholder="Plazas">
+                <input type="number" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required>
                 <label for="plazas">Plazas</label>
             </div>
 
@@ -43,6 +43,8 @@
 
             <input class="btn btn-primary mb-3" type="submit" value="Aceptar">
             <input class="btn btn-secondary mb-3" type="reset" value="Cancelar">
+
+            <input type="checkbox" name="featured" value="0">
 
             <script>
                 $('#datepicker').datepicker({
