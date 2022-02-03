@@ -1,10 +1,11 @@
-@extends('layouts.app')
+@extends('../layouts.app')
 
 @section('content')
 <div class="container">
 
-    <h2>Mis masterclasses</h2>
-    <h4>Hola, {{ auth()->user()->name }} </h4>
+    <h1 class="display-6 mb-5 section-title"><span class="section-title-line">Mis masterclass</span></h1>
+
+    <h4 class="welcome-user-title">¡Hola, {{ auth()->user()->name }}!</h4>
 
     <table class="table table-light">
 

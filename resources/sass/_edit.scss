@@ -1,0 +1,103 @@
+.btn-custom {
+    border-style        : none;
+    color               : $second-color;
+    padding             : 0.375rem 0.95rem;
+
+    &:hover, &:visited, &:focus, &:active {
+        color           : $second-color;
+        border-style    : none;
+        box-shadow      : none;
+    }
+}
+
+.btn-gray {
+    background          : $third-color;
+    padding             : 0.85rem 0.95rem;
+
+    svg {
+        color           : white;
+    }
+
+    &:hover, &:active {
+        background      : $third-color;
+    }
+
+    // &:focus {
+    //     background-color: $fourth-color;
+    // }
+}
+
+.btn-edit {
+    background          : $fourth-color;
+
+    svg {
+        color           : white;
+    }
+
+    &:hover, &:active {
+        background-color: #d0f8b2;
+    }
+
+    // &:focus {
+    //     background-color: $fourth-color;
+    // }
+}
+
+.btn-delete {
+    background          : $five-color;
+
+    svg {
+        color           : white;
+    }
+
+    &:hover, &:active {
+        background-color: #ff8080;
+    }
+
+    // &:focus {
+    //     background-color: $five-color;
+    // }
+}
+
+.btn-transparent {
+    background          : transparent;
+    color               : $third-color;
+
+    svg {
+        color           : $third-color;
+
+        &:hover {
+            color       : $second-color;
+        }
+
+        &:active {
+            color       : black;
+        }   
+        
+        &:focus {
+            background  : transparent;
+            color       : $second-color;
+        }
+
+        &:visited {
+            background  : transparent;
+            color       : $second-color;
+        }
+    
+    }
+
+    &:hover, &:active {
+        background      : transparent;
+        color           : #8b949b;
+    }
+
+    &:focus {
+        background      : transparent;
+        color           : $second-color;
+    }
+
+    &:visited {
+        background      : transparent;
+        color           : $second-color;
+    }
+}
