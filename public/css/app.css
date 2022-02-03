@@ -22791,7 +22791,7 @@ header .navigation :last-child:hover {
 .btn-custom {
   border-style: none;
   color: #222222;
-  padding: 0.375rem 0.95rem;
+  padding: 0.375rem 0.375rem;
 }
 .btn-custom:hover, .btn-custom:visited, .btn-custom:focus, .btn-custom:active {
   color: #222222;
@@ -22800,8 +22800,7 @@ header .navigation :last-child:hover {
 }
 
 .btn-gray {
-  background: #6C757D;
-  padding: 0.85rem 0.95rem;
+  background: #3E3E3E;
   /*   &:focus {
         background-color: $fourth-color;
     } */
@@ -22815,6 +22814,7 @@ header .navigation :last-child:hover {
 
 .btn-edit {
   background: #C8EBAD;
+  padding: 0.475rem 0.875rem;
   /*   &:focus {
         background-color: $fourth-color;
     } */
@@ -22828,6 +22828,7 @@ header .navigation :last-child:hover {
 
 .btn-delete {
   background: #ED7070;
+  padding: 0.475rem 0.875rem;
   /*   &:focus {
         background-color: $five-color;
     } */
