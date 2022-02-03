@@ -4,7 +4,7 @@
 
     <div class="container">
 
-    <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES DISPONIBLES</span></h1>
+    <h1 class="display-6 mb-5 section-title"><span class="section-title-line">EDIT MASTERCLASSES</span></h1>
 
 
     <div>

@@ -11,22 +11,22 @@
         @csrf
 
             <div class="form-floating mb-3 mt-3">
-                <input type="text" class="form-control" id="title" name="name" placeholder="Título de la MasterClass" required>
+                <input type="text" class="form-control" id="title" name="name" placeholder="Título de la MasterClass">
                 <label for="title">Título de la MasterClass</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="datepicker" name="date" placeholder="Fecha" required>
+                <input type="text" class="form-control" id="datepicker" name="date" placeholder="Fecha">
                 <label for="datepicker"></label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="timepicker" name="time" placeholder="Hora de inicio" required>
+                <input type="text" class="form-control" id="timepicker" name="time" placeholder="Hora de inicio" >
                 <label for="timepicker"></label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required>
+                <input type="number" class="form-control" id="plazas" name="vacants" placeholder="Plazas">
                 <label for="plazas">Plazas</label>
             </div>
 

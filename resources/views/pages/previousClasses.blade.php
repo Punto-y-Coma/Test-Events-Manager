@@ -1,8 +1,6 @@
 <section class="container cards-section">
 
-  <div>
-    <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
-  </div>
+  <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
 
   <div class="container cards-container">
     <div class="row justify-content-evenly gap-5">

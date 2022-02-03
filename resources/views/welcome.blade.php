@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
 
-  <div>
-
-    @include('pages.nextClasses');
-    @include('pages.previousClasses');
-
-  </div>
-
+        @include('pages.nextClasses');
+        @include('pages.previousClasses');
+    
+    </div>
 @endsection

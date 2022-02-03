@@ -22715,7 +22715,7 @@ body {
   color: white;
 }
 .btn-gray:hover, .btn-gray:active {
-  background: #6C757D;
+  background: #222222;
 }
 
 .btn-edit {
@@ -22779,10 +22779,10 @@ body {
   margin: 0 auto;
   width: 20rem;
 }
-.create-container div .form-control, .create-container div .gj-datepicker-bootstrap [role=right-icon] button, .create-container div .border {
+.create-container div .form-control {
   border: 1px solid #6C757D !important;
 }
-.create-container div .form-control:focus, .create-container div .gj-datepicker-bootstrap [role=right-icon] button:focus, .create-container div .border:focus {
+.create-container div .form-control:focus {
   border-color: #C8EBAD;
   box-shadow: 0 0 0 0.25rem rgba(72, 160, 6, 0.8);
 }
