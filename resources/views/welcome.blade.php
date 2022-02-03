@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+  @include('pages.slider')
   <div class="container">
 
     <div>

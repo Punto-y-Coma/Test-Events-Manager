@@ -6,6 +6,12 @@ use Illuminate\View\Component;
 
 class Slider extends Component
 {
+    public $name;
+    public $date;
+    public $vacants;
+    public $image;
+
+
     /**
      * Create a new component instance.
      *
@@ -13,7 +19,10 @@ class Slider extends Component
      */
     public function __construct()
     {
-        //
+        //$this->name = $name;
+        //$this->date = $date;
+        //$this-> vacants = $vacants;
+        //$this-> image = $image;
     }
 
     /**

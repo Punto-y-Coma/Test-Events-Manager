@@ -7,26 +7,26 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src="https://lh4.googleusercontent.com/1uvTzxlJ-rgecLm5vw_vff_-cn0gBzhPfnvYyRBHJNdlfGg7ucvy4VC198o=w2400" class="d-block w-100" alt="...">
+        <img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <h5>{{ $name }}</h5>
+          <p>{{ $date }} - {{ $vacants }}</p>
           <button type="button" class="btn btn-dark">Inscríbete</button>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="https://lh5.googleusercontent.com/2VvGz1WnVaoxUOTTwWm_T1dQ9G3dOQ8uGoBwLOfQdXwHqFBFgxOA2Z5dlUU=w2400" class="d-block w-100" alt="..." >
+        <img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}" >
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h5>{{ $name }}</h5>
+          <p>{{ $date }} - {{ $vacants }}</p>
           <button type="button" class="btn btn-dark">Inscríbete</button>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://lh5.googleusercontent.com/kpz34_A-tN9MyA12hBsxQi2-JacWAp8RYprezWrzH38yN6lz8Jyrpr63ztM=w2400" class="d-block w-100" alt="...">
+        <img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+          <h5>{{ $name }}</h5>
+          <p>{{ $date }} - {{ $vacants }}</p>
           <button type="button" class="btn btn-dark">Inscríbete</button>
         </div>
       </div>
