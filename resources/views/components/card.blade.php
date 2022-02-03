@@ -11,13 +11,9 @@
         {{ $vacants }} plazas
       </h6>
     </div>
-<<<<<<< HEAD
     <p class="card-text">
       {{ $description }}
     </p>
   </div>
   
-=======
-      
->>>>>>> f234246d76c9d923843c1dbd1634cccc5e211b1e
 </div>
