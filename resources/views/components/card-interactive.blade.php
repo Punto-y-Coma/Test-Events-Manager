@@ -14,6 +14,9 @@
       <p class="card-text">
         {{ $description }}
       </p>
+      <div class="card-btns">
+        <a href="#" class="btn btn-secondary">Inscríbete</a>
+      </div>
     </div>
-    
+      
   </div>

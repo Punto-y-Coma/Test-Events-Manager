@@ -26,12 +26,12 @@ class HomeController extends Controller
     public function index()
     {    
         $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
-
+        //$datos2 ['masterclasses'] = (datos de las masterclasses a las que te has suscrito)
         if (auth()->user()->is_admin === 1) {
             return view('pages.admin', $datos);
         }
         else {
-            return view('pages.home', $datos);
+            return view('pages.home', $datos/* 2 */);
         }
     }
 }
