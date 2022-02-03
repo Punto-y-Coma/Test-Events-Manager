@@ -38,6 +38,11 @@
 
 /* Btns */
 
+.btn-check:focus + .btn, .btn:focus {
+    border-color            : $fourth-color;
+    box-shadow              : 0 0 0 0.25rem rgb(72 160 6 / 80%);
+}
+
 .btn-primary {
     background-color        : $fourth-color;
     border-color            : $third-color;
