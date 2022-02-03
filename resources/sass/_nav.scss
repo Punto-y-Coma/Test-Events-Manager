@@ -1,0 +1,52 @@
+.header-nav {
+
+    .navbar-brand {
+        font-size           : 2rem;
+        text-transform      : uppercase;
+        margin-left         : -0.5rem; // Ajustar lateral izquierdo de app.name, para que en hover se vea equidistante el bg
+        padding             : 0 0.5rem;
+
+        &:hover, &:visited {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius   : 10px;
+            color           : $first-color;
+        }
+    }
+
+    .welcome-header-btn a.nav-link {
+        border          : 1px solid $first-color;
+        border-radius   : 10px;
+        color           : $first-color;
+        display         : inline-block;
+        margin-left     : 1rem;
+        padding         : 0.2rem 0.8rem;
+
+        &:hover, &:focus {
+            background  : $fourth-color;
+            color       : $second-color;
+        }
+    }
+
+    .welcome-header-register-btn a.nav-link {
+        background      : $first-color;
+        color           : $second-color;
+
+        &:hover, &:focus {
+            background  : $fourth-color;
+            color       : $second-color;
+        }
+    }
+
+    .dropdown-menu {
+        margin          : 0;
+        padding         : 0;
+
+        .dropdown-item {
+            padding     : 1rem;
+        }
+
+        .dropdown-last-item {
+            border-top  : 1px solid $second-color;         
+        }
+    }
+}

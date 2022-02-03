@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('includes.head')
+    <x-head /> 
 </head>
 <body>
     
-    <header class="d-flex justify-content-between align-items-center">
-        <x-header/>
-    </header>
+    <x-header />
 
     <div id="main" class="my-5">
         @yield('content')
