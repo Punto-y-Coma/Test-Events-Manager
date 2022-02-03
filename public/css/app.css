@@ -22725,10 +22725,22 @@ body {
   background: #6C757D;
   color: #E5E5E5;
 }
-.edit-masterclasses-container .edit-masterclasses-table thead th:first-child, .edit-masterclasses-container .edit-masterclasses-table thead th:last-child, .edit-masterclasses-container .edit-masterclasses-table thead td:first-child, .edit-masterclasses-container .edit-masterclasses-table thead td:last-child {
-  margin: 0 1rem;
+.edit-masterclasses-container .edit-masterclasses-table tr:first-child > td {
+  padding-top: 1.5rem;
 }
-.edit-masterclasses-container .edit-masterclasses-table tr td:nth-last-child(-n+3) {
+.edit-masterclasses-container .edit-masterclasses-table tr:last-child > td {
+  padding-bottom: 1.5rem;
+}
+.edit-masterclasses-container .edit-masterclasses-table tr > :first-child {
+  padding-left: 1.5rem;
+}
+.edit-masterclasses-container .edit-masterclasses-table tr > :last-child {
+  padding-right: 1.5rem;
+}
+.edit-masterclasses-container .edit-masterclasses-table td:nth-child(3n) {
+  text-align: center;
+}
+.edit-masterclasses-container .edit-masterclasses-table td:nth-last-child(-n+3) {
   text-align: center;
   width: 5rem;
 }
@@ -22952,7 +22964,7 @@ body {
   padding: 0;
 }
 .header-nav .dropdown-menu .dropdown-item {
-  padding: 1rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
 }
 .header-nav .dropdown-menu .dropdown-last-item {
   border-top: 1px solid #222222;
