@@ -25,12 +25,11 @@ class MasterclassController extends Controller
 
         $data = $request->all();
 
-        if($data['featured'] == NULL) {
+        if (count($data) == 7)
+        {
             $data['featured'] = 0;
         }
-
-        
-
+    
         /* d/m/Y  ->  Y-m-d */
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
         $newData = Masterclass::create($data);
