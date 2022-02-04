@@ -22824,10 +22824,14 @@ body {
   margin: 0 auto;
   width: 20rem;
 }
-.create-container div form .form-control {
+.create-container div form .form-control,
+.create-container div form .gj-datepicker-bootstrap [role=right-icon] button,
+.create-container div form .border {
   border: 1px solid #6C757D !important;
 }
-.create-container div form .form-control:focus {
+.create-container div form .form-control:focus,
+.create-container div form .gj-datepicker-bootstrap [role=right-icon] button:focus,
+.create-container div form .border:focus {
   border-color: #C8EBAD;
   box-shadow: 0 0 0 0.25rem rgba(72, 160, 6, 0.8);
 }
@@ -22839,6 +22843,9 @@ body {
 }
 .create-container div form .create-masterclass-btns .form-check {
   margin-bottom: 1rem !important;
+}
+.create-container div form .create-masterclass-btns .form-check .form-check-input:checked:checked {
+  background-color: #50A111;
 }
 
 /* Selected text */
