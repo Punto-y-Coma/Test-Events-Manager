@@ -16,10 +16,6 @@ use App\Http\Controllers\MasterclassController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
 
 Route::get('/', [MasterclassController::class, 'index'])->name('welcome');

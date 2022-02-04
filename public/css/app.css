@@ -22643,10 +22643,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.cards-section .cards-container {
+.cards-container {
   margin-top: 6rem;
 }
-.cards-section .cards-container .card {
+.cards-container .card {
   background: #FFFFFF;
   border: 1px solid #6C757D;
   border-radius: 15px;
@@ -22654,42 +22654,50 @@ body {
   padding: 0;
   width: 25rem;
 }
-.cards-section .cards-container .card img, .cards-section .cards-container .card .card-img-top {
+.cards-container .card img, .cards-container .card .card-img-top {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cards-section .cards-container .card .card-body {
+.cards-container .card .card-body {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
 }
-.cards-section .cards-container .card .card-body > *:not(:first-child) {
+.cards-container .card .card-body > *:not(:first-child) {
   margin-top: 0.6rem;
 }
-.cards-section .cards-container .card .card-body .card-title {
+.cards-container .card .card-body .card-title {
   font-weight: bold;
   font-size: 2rem;
 }
-.cards-section .cards-container .card .card-body .card-subtitle .mb-2 .text-muted {
+.cards-container .card .card-body .card-subtitle .mb-2 .text-muted {
   vertical-align: top;
   fill: solid;
   color: rgba(229, 229, 229, 0.5);
 }
-.cards-section .cards-container .card .card-body .card-date-time {
+.cards-container .card .card-body .card-date-time {
   display: flex;
   justify-content: space-between;
 }
-.cards-section .cards-container .card .card-body .card-text {
+.cards-container .card .card-body .card-text {
   color: #222222;
   flex-grow: 1;
 }
-.cards-section .cards-container .card .card-body .card-btns {
+.cards-container .card .card-body .card-btns {
   text-align: center;
 }
-.cards-section .cards-container .card .card-body .card-btns .btn {
+.cards-container .card .card-body .card-btns .btn {
   color: #E5E5E5;
+  font-weight: bold;
+  margin: 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.cards-container .card .card-body .card-btns .inscription-btn-checked {
+  background: #C8EBAD;
+  color: #222222;
   font-weight: bold;
   margin: 1rem;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
@@ -22844,8 +22852,14 @@ body {
 .create-container div form .create-masterclass-btns .form-check {
   margin-bottom: 1rem !important;
 }
-.create-container div form .create-masterclass-btns .form-check .form-check-input:checked:checked {
+.create-container div form .create-masterclass-btns .form-check .form-check-input {
+  border-color: #C8EBAD;
+}
+.create-container div form .create-masterclass-btns .form-check .form-check-input:checked {
   background-color: #50A111;
+}
+.create-container div form .create-masterclass-btns .form-check .form-check-input:hover, .create-container div form .create-masterclass-btns .form-check .form-check-input:active, .create-container div form .create-masterclass-btns .form-check .form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(72, 160, 6, 0.8);
 }
 
 /* Selected text */
@@ -22965,6 +22979,11 @@ body {
 }
 .header-nav .dropdown-menu .dropdown-item {
   padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.header-nav .dropdown-menu .dropdown-item.active, .header-nav .dropdown-menu .dropdown-item:active {
+  color: #E5E5E5;
+  text-decoration: none;
+  background-color: #6C757D;
 }
 .header-nav .dropdown-menu .dropdown-last-item {
   border-top: 1px solid #222222;
