@@ -7,10 +7,13 @@
     <h1 class="display-6 mb-5 section-title"><span class="section-title-line">Editar masterclasses</span></h1>
 
     <div>
-        <button type="button" class="btn btn-custom btn-add" value="add_masterclass"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-          </svg></button>
+        <a href="{{ route('masterclass.create') }}" type="button" class="btn btn-custom btn-add" value="add_masterclass">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+        </a>
     </div>
+
 
     <table class="table edit-masterclasses-table">
         <thead>
