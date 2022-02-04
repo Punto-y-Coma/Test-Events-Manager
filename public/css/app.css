@@ -22824,11 +22824,33 @@ body {
   margin: 0 auto;
   width: 20rem;
 }
-.create-container div .form-control {
+.create-container div form .form-control,
+.create-container div form .gj-datepicker-bootstrap [role=right-icon] button,
+.create-container div form .border {
   border: 1px solid #6C757D !important;
 }
-.create-container div .form-control:focus {
+.create-container div form .form-control:focus,
+.create-container div form .gj-datepicker-bootstrap [role=right-icon] button:focus,
+.create-container div form .border:focus {
   border-color: #C8EBAD;
+  box-shadow: 0 0 0 0.25rem rgba(72, 160, 6, 0.8);
+}
+.create-container div form .create-masterclass-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.create-container div form .create-masterclass-btns .form-check {
+  margin-bottom: 1rem !important;
+}
+.create-container div form .create-masterclass-btns .form-check .form-check-input {
+  border-color: #C8EBAD;
+}
+.create-container div form .create-masterclass-btns .form-check .form-check-input:checked {
+  background-color: #50A111;
+}
+.create-container div form .create-masterclass-btns .form-check .form-check-input:hover, .create-container div form .create-masterclass-btns .form-check .form-check-input:active, .create-container div form .create-masterclass-btns .form-check .form-check-input:focus {
   box-shadow: 0 0 0 0.25rem rgba(72, 160, 6, 0.8);
 }
 

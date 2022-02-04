@@ -41,8 +41,17 @@
                 <input type="url" class="form-control" id="image" name="image" placeholder="https://example.com" pattern="https://.*" size="38" required>
             </div>
 
-            <input class="btn btn-primary mb-3" type="submit" value="Aceptar">
-            <input class="btn btn-secondary mb-3" type="reset" value="Cancelar">
+            <div class="create-masterclass-btns">
+                <input class="btn btn-primary mb-3" type="submit" value="Aceptar">
+                <input class="btn btn-secondary mb-3" type="reset" value="Cancelar">
+            
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="featured" name="featured" checked>
+                    <label class="form-check-label" for="featured">
+                      Destacada
+                    </label>
+                </div>
+            </div>
 
             <script>
                 $('#datepicker').datepicker({
