@@ -61,12 +61,18 @@
         }
 
         .btn-col {
+            margin              : 0 auto;
             text-align          : center;
             width               : 5rem;
 
             svg {
                 display         : inline;
             }
+        }
+
+        .form-check {
+            margin              : 0 auto;
+            width               : 1.5rem;
         }
 
         svg {

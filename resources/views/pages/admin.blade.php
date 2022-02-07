@@ -48,6 +48,8 @@
                     :time="$masterclass->time"
                     :vacants="$masterclass->vacants"
                     :description="$masterclass->description"
+                    :featured="$masterclass->featured"
+                    :id="$masterclass->id"
                 />
             @endforeach  
         </tbody>
