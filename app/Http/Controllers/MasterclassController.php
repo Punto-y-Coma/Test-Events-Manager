@@ -47,5 +47,11 @@ class MasterclassController extends Controller
         //status 302
     }
 
-    
+    public function destroy($id)
+    {
+        $masterclass = Masterclass::where('id', $id)->delete();
+
+        return redirect('home');
+    }
+
 }

@@ -11,19 +11,23 @@ class AdminTableCell extends Component
     public $time;
     public $vacants;
     public $description;
+    public $featured;
+    public $id;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $date, $time, $vacants, $description)
+    public function __construct($name, $date, $time, $vacants, $description, $featured, $id)
     {
         $this->name = $name;
         $this->date = $date;
-        $this-> time = $time;
-        $this-> vacants = $vacants;
-        $this-> description = $description;
+        $this->time = $time;
+        $this->vacants = $vacants;
+        $this->description = $description;
+        $this->featured = $featured;
+        $this->id = $id;
     }
 
 
