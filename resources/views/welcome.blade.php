@@ -3,7 +3,7 @@
 @section('content')
   <div class="container">
 
-    @include('pages.slider')
+    @include('pages.featuredClasses')
     @include('pages.nextClasses')
     @include('pages.previousClasses')
     

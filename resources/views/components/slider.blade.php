@@ -1,52 +1,30 @@
- <div>
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>{{ $name }}</h5>
-          <p>{{ $date }} - {{ $vacants }}</p>
-          <button type="button" class="btn btn-dark">Inscríbete</button>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}" >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>{{ $name }}</h5>
-          <p>{{ $date }} - {{ $vacants }}</p>
-          <button type="button" class="btn btn-dark">Inscríbete</button>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>{{ $name }}</h5>
-          <p>{{ $date }} - {{ $vacants }}</p>
-          <button type="button" class="btn btn-dark">Inscríbete</button>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+<img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}">
+<div class="carousel-caption d-none d-md-block">
+  <h5>{{ $name }}</h5>
+  <p>{{ $date }} - {{ $vacants }}</p>
+  <div class="card-btns">
+
+    @if (Route::has('login'))
+      @auth
+        {{-- Intentar pulir la condicional del if refactorizando--}}
+        @if (Auth::user()->masterclasses->find($id)) 
+        
+        <button class="btn btn-secondary inscription-btn-checked">
+          <i class="bi bi-check-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+            </svg>
+          </i>
+        </button>
+
+        @else
+          <a href="{{ route('subscribe', $id) }}" class="btn btn-secondary">Inscríbete</a>
+        @endif
+        
+      @else
+        <a href="{{ route('login') }}" class="btn btn-secondary">Inscríbete</a>
+      @endauth
+    @endif
+
   </div>
 </div>
-     
-
-     {{ $name }}
-     {{ $date }}
-     {{ $time }}
-     {{ $vacants }}
-     {{ $image }}
-     {{ $id }}
-     

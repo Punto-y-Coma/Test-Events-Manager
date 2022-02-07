@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Masterclass;
@@ -10,12 +11,16 @@ class MasterclassController extends Controller
 {
     public function index()
     {
-        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
-        $datos2['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
-        //$datos3['featured_masterclasses'] = Masterclass::all();
-        $datos3['featured_masterclasses'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
-        return view('welcome', $datos, $datos2, $datos3);
+        $masterclasses = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
+        $masterclasses_out_date = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
+        $masterclasses_featured = Masterclass::where('featured', 1)->get();
+        return view('welcome', compact('masterclasses', 'masterclasses_out_date', 'masterclasses_featured'));
 
+        
+        // $masterclasses = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
+        // $masterclasses_out_date = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
+        // $userEvents = Auth::user()->masterclasses;
+        // return view('welcome', compact('masterclasses', 'masterclasses_out_date', 'user_events'));
     }
 
     public function create()
@@ -28,11 +33,10 @@ class MasterclassController extends Controller
 
         $data = $request->all();
 
-        if (count($data) == 7)
-        {
+        if (count($data) == 7) {
             $data['featured'] = 0;
         }
-    
+
         /* d/m/Y  ->  Y-m-d */
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
         $newData = Masterclass::create($data);
@@ -56,5 +60,4 @@ class MasterclassController extends Controller
 
         return redirect('home');
     }
-
 }
