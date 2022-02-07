@@ -8,8 +8,10 @@ class Slider extends Component
 {
     public $name;
     public $date;
+    public $time;
     public $vacants;
     public $image;
+    public $id;
 
 
     /**
@@ -17,12 +19,15 @@ class Slider extends Component
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($name, $date, $time, $vacants, $image, $id)
+
     {
-        //$this->name = $name;
-        //$this->date = $date;
-        //$this-> vacants = $vacants;
-        //$this-> image = $image;
+        $this->name = $name;
+        $this->date = $date;
+        $this->time = $time;
+        $this->vacants = $vacants;
+        $this->image = $image;
+        $this->id = $id;
     }
 
     /**
