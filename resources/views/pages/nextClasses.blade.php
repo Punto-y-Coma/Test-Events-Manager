@@ -24,5 +24,5 @@
   <div class="d-flex justify-content-end">
     {!! $masterclasses->appends(['masterclasses_out_date' => $masterclasses_out_date->currentPage()])->links() !!}
   </div>
-
+  
 </section>

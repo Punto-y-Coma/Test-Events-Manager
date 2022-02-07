@@ -44,7 +44,13 @@
             <div class="create-masterclass-btns">
                 <input class="btn btn-primary mb-3" type="submit" value="Aceptar">
                 <input class="btn btn-secondary mb-3" type="reset" value="Cancelar">
-                <input type="checkbox" name="featured" value="featured" checked>
+
+                <div class="form-check">
+                    <input class="form-check-input form-control" type="checkbox" value="1" id="featured" name="featured" checked>
+                    <label class="form-check-label" for="featured">
+                      Destacada
+                    </label>
+                </div>
             </div>
 
             <script>

@@ -35,7 +35,17 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('/home') }}">Mis masterclasses</a>
+
+                            <a class="dropdown-item" href="{{ url('/') }}">Inicio</a>
+
+                            @if(Auth::user()->is_admin === 1 )
+                                <a class="dropdown-item" href="{{ url('/home') }}">Editar masterclasses</a>
+    
+                            @else 
+                                <a class="dropdown-item" href="{{ url('/home') }}">Mis masterclasses</a>
+    
+                            @endif
+
                             <a class="dropdown-item dropdown-last-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">

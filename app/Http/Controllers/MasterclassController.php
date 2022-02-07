@@ -25,8 +25,14 @@ class MasterclassController extends Controller
     public function store(Request $request)
     {
 
-        /* d/m/Y  ->  Y-m-d */
         $data = $request->all();
+
+        if (count($data) == 7)
+        {
+            $data['featured'] = 0;
+        }
+    
+        /* d/m/Y  ->  Y-m-d */
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
         $newData = Masterclass::create($data);
         return $this->index();
@@ -43,5 +49,11 @@ class MasterclassController extends Controller
         //status 302
     }
 
-    
+    public function destroy($id)
+    {
+        $masterclass = Masterclass::where('id', $id)->delete();
+
+        return redirect('home');
+    }
+
 }

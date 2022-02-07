@@ -43,6 +43,12 @@
 
         .dropdown-item {
             padding     : 0.5rem 2rem 0.5rem 1rem;
+
+            &.active, &:active {
+                color: $first-color;
+                text-decoration: none;
+                background-color: $third-color;
+            }
         }
 
         .dropdown-last-item {
