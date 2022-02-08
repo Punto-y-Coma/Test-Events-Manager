@@ -15,12 +15,6 @@ class MasterclassController extends Controller
         $masterclasses_out_date = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
         $masterclasses_featured = Masterclass::where('featured', 1)->get();
         return view('welcome', compact('masterclasses', 'masterclasses_out_date', 'masterclasses_featured'));
-
-        
-        // $masterclasses = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
-        // $masterclasses_out_date = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
-        // $userEvents = Auth::user()->masterclasses;
-        // return view('welcome', compact('masterclasses', 'masterclasses_out_date', 'user_events'));
     }
 
     public function create()
@@ -51,12 +45,11 @@ class MasterclassController extends Controller
 
         return redirect('home');
 
-        //status 302
     }
 
     public function destroy($id)
     {
-        $masterclass = Masterclass::where('id', $id)->delete();
+        Masterclass::destroy($id);
 
         return redirect('home');
     }

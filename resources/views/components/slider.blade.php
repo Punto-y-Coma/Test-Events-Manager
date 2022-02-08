@@ -1,7 +1,7 @@
 <img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}">
 <div class="carousel-caption d-none d-md-block">
   <h5>{{ $name }}</h5>
-  <p>{{ $date }}, {{ $vacants }} plazas</p>
+  <p>{{ \Carbon\Carbon::parse($date)->format('d/m/Y')}} - {{ $vacants }} plazas</p>
   <div class="card-btns">
 
     @if (Route::has('login'))
@@ -18,11 +18,11 @@
         </button>
 
         @else
-          <a href="{{ route('subscribe', $id) }}" class="btn btn-secondary">Inscríbete</a>
+          <a href="{{ route('subscribe', $id) }}" class="btn btn-secondary btn-dark">Inscríbete</a>
         @endif
         
       @else
-        <a href="{{ route('login') }}" class="btn btn-secondary">Inscríbete</a>
+        <a href="{{ route('login') }}" class="btn btn-secondary btn-dark">Inscríbete</a>
       @endauth
     @endif
 
