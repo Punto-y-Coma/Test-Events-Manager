@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Masterclass;
+use Illuminate\Support\Facades\Auth;
 
 class MasterclassController extends Controller
 {
@@ -22,18 +23,39 @@ class MasterclassController extends Controller
     public function store(Request $request)
     {
         /* d/m/Y  ->  Y-m-d */
-        $data = $request->all();
-        $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
-        $newData = Masterclass::create($data);
-        return $this->index();
 
+        $data = $request->all();
+
+        if (count($data) == 7)
+        {
+            $data['featured'] = 0;
+        }
+
+        if($request->hasFile('image')){
+            $data['image']=$request->file('image')->store('uploads','public');
+        }
+    
+        /* d/m/Y  ->  Y-m-d */
+        $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
+        Masterclass::create($data);
+        return $this->index();
     }
 
- /*    public function store(Request $request)
-{
-    $data = $request->all();
-    $data['transaction_date'] = Carbon::createFromFormat('m/d/Y', $request->transaction_date)->format('Y-m-d');
-    $transaction = Transaction::create($data);
-} */
+    public function subscribe($id)
+    {
+        $masterclass = Masterclass::find($id);
 
+        Masterclass::addToPivotTable($masterclass);
+
+        return redirect('home');
+
+        //status 302
+    }
+
+    public function destroy($id)
+    {
+        Masterclass::destroy($id);
+
+        return redirect('home');
+    }
 }

@@ -1,4 +1,4 @@
-<section class="container cards-section">
+<section class="cards-section">
 
   <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES DISPONIBLES</span></h1>
 
@@ -13,15 +13,16 @@
       :vacants="$masterclass->vacants"
       :description="$masterclass->description"
       :image="$masterclass->image"
+      :featured="$masterclass->featured"
+      :id="$masterclass->id"
       />
 
       @endforeach   
-
     </div>
   </div>
 
   <div class="d-flex justify-content-end">
     {!! $masterclasses->appends(['masterclasses_out_date' => $masterclasses_out_date->currentPage()])->links() !!}
   </div>
-
+  
 </section>

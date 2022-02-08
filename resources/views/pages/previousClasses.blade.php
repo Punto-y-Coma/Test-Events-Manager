@@ -1,4 +1,4 @@
-<section class="container cards-section">
+<section class="cards-section">
 
   <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
 
@@ -13,10 +13,11 @@
       :vacants="$masterclass->vacants"
       :description="$masterclass->description"
       :image="$masterclass->image"
+      :featured="$masterclass->featured"
+      :id="$masterclass->id"
       />
 
       @endforeach   
-
     </div>
   </div>
 

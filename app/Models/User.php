@@ -43,9 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function users()
+    public function masterclasses()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(Masterclass::class);
     }
 
     public function isAdmin() {

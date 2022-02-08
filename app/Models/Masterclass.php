@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Support\Facades\Auth;
+
 class Masterclass extends Model
 {
     use HasFactory;
@@ -22,11 +24,17 @@ class Masterclass extends Model
         'vacants',
         'description',
         'image',
+        'featured',
     ];
 
-    public function masterclasses()
+    public function users()
     {
-        return $this->belongsToMany(Masterclass::class);
+        return $this->belongsToMany(User::class);
+    }
+
+    static function addToPivotTable($masterclass)
+    {
+        $masterclass->users()->attach(Auth::user());
     }
 
 }

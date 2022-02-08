@@ -6,26 +6,30 @@ use Illuminate\View\Component;
 
 class CardInteractive extends Component
 {
+    public $id;
     public $name;
     public $date;
     public $time;
     public $vacants;
     public $description;
     public $image;
+    public $featured;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $date, $time, $vacants, $description, $image)
+    public function __construct($id, $name, $date, $time, $vacants, $description, $image, $featured)
     {
+        $this->id = $id;
         $this->name = $name;
         $this->date = $date;
-        $this-> time = $time;
-        $this-> vacants = $vacants;
-        $this-> description = $description;
-        $this-> image = $image;
+        $this->time = $time;
+        $this->vacants = $vacants;
+        $this->description = $description;
+        $this->image = $image;
+        $this->featured = $featured;
     }
     /**
      * Get the view / contents that represent the component.

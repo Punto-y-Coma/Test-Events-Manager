@@ -10,27 +10,26 @@
     <div class="container cards-container">
       <div class="row justify-content-evenly gap-5">
   
-        @foreach ($masterclasses as $masterclass)            
+        @foreach ($user_events as $masterclass)            
         <x-card component 
-        :id="$masterclass->id"
         :name="$masterclass->name"
         :date="$masterclass->date"
         :time="$masterclass->time"
         :vacants="$masterclass->vacants"
         :description="$masterclass->description"
         :image="$masterclass->image"
+        :featured="$masterclass->featured"
+        :id="$masterclass->id"
         />
         @endforeach   
   
       </div>
     </div> 
 
-    <div class="d-flex justify-content-end">
-      {!! $masterclasses->links() !!}
-    </div>
+    {{-- <div class="d-flex justify-content-end">
+      {!! $user_events->links() !!}
+    </div> --}}
 
 </div>
 
 @endsection
-
-

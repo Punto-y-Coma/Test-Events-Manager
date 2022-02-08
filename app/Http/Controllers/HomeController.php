@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Masterclass;
 use App\Models\User;
-
 class HomeController extends Controller
 {
     /**
@@ -25,13 +25,22 @@ class HomeController extends Controller
      */
     public function index()
     {    
-        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
-        //$datos2 ['masterclasses'] = (datos de las masterclasses a las que te has suscrito)
+        $datos['masterclasses'] = Masterclass::paginate(5);
+
         if (auth()->user()->is_admin === 1) {
             return view('pages.admin', $datos);
         }
         else {
-            return view('pages.home', $datos/* 2 */);
+            // Que queremos hacer:
+            // Listar las masterclasses del usuario logueado
+            // Recuperar usuario logueado
+            // Recuperar eventos de ese usuario
+            // Paginarlos
+            // Devolver a vista home
+            $userEvents['user_events'] = Auth::user()->masterclasses;
+            //dd($userEvents);
+            
+            return view('pages.home', $userEvents);
         }
     }
 }
