@@ -22695,6 +22695,14 @@ body {
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
+.cards-container .card .card-body .card-btns .inscription-btn-maxed-out {
+  background: #b1c0ce;
+  color: #3E3E3E;
+  font-weight: bold;
+  margin: 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
 .cards-container .card .card-body .card-btns .inscription-btn-checked {
   background: #C8EBAD;
   color: #222222;

@@ -32,7 +32,7 @@
   
             @elseif ($masterclass->users()->count() >= $masterclass->vacants)
 
-            <button class="btn btn-secondary">Plazas llenas</button>
+              <button class="btn btn-secondary inscription-btn-maxed-out">Plazas llenas</button>
 
             @else
               <a href="{{ route('subscribe', $id) }}" class="btn btn-secondary">Inscríbete</a>
