@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Masterclass;
@@ -10,9 +11,10 @@ class MasterclassController extends Controller
 {
     public function index()
     {
-        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
-        $datos2['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
-        return view('welcome', $datos, $datos2);
+        $masterclasses = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
+        $masterclasses_out_date = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
+        $masterclasses_featured = Masterclass::where('featured', 1)->get();
+        return view('welcome', compact('masterclasses', 'masterclasses_out_date', 'masterclasses_featured'));
     }
 
     public function create()
@@ -26,8 +28,7 @@ class MasterclassController extends Controller
 
         $data = $request->all();
 
-        if (count($data) == 7)
-        {
+        if (count($data) == 7) {
             $data['featured'] = 0;
         }
 
@@ -49,7 +50,6 @@ class MasterclassController extends Controller
 
         return redirect('home');
 
-        //status 302
     }
 
     public function destroy($id)
