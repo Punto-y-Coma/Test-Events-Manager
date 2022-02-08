@@ -40,16 +40,11 @@ class MasterclassController extends Controller
     {
         $masterclass = Masterclass::find($id);
 
-        $masterclasses = $masterclass->users();
-        $usersOnMasterclass = $masterclasses->count();
-
-        $masterclassVacants = $masterclass->vacants;
-
-        if ($usersOnMasterclass < $masterclassVacants) {
-            Masterclass::addToPivotTable($masterclass);
-        }
+        Masterclass::addToPivotTable($masterclass);
 
         return redirect('home');
+
+        // if (Masterclass::find($id)->users()->count() < Masterclass::find($id)->vacants)
 
         //status 302
     }

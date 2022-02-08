@@ -7,6 +7,7 @@
 
       @foreach ($masterclasses as $masterclass)            
       <x-card-interactive component 
+      :masterclass="$masterclass"
       :name="$masterclass->name"
       :date="$masterclass->date"
       :time="$masterclass->time"
