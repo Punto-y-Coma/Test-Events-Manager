@@ -40,7 +40,14 @@ class MasterclassController extends Controller
     {
         $masterclass = Masterclass::find($id);
 
-        Masterclass::addToPivotTable($masterclass);
+        $masterclasses = $masterclass->users();
+        $usersOnMasterclass = $masterclasses->count();
+
+        $masterclassVacants = $masterclass->vacants;
+
+        if ($usersOnMasterclass < $masterclassVacants) {
+            Masterclass::addToPivotTable($masterclass);
+        }
 
         return redirect('home');
 
