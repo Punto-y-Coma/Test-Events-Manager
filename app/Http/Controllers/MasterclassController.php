@@ -10,9 +10,10 @@ class MasterclassController extends Controller
 {
     public function index()
     {
-        $datos['masterclasses'] = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
-        $datos2['masterclasses_out_date'] = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
-        return view('welcome', $datos, $datos2);
+        $masterclasses = Masterclass::where('date', '>', date("Y-m-d"))->paginate(6, ['*'], 'masterclasses');
+        $masterclasses_out_date = Masterclass::where('date', '<', date("Y-m-d"))->paginate(3, ['*'], 'masterclasses_out_date');
+        $masterclasses_featured = Masterclass::all();
+        return view('welcome', compact('masterclasses', 'masterclasses_out_date', 'masterclasses_featured'));
     }
 
     public function create()
@@ -38,6 +39,9 @@ class MasterclassController extends Controller
 
     public function subscribe($id)
     {
+
+        dd($id);
+
         $masterclass = Masterclass::find($id);
 
         Masterclass::addToPivotTable($masterclass);
@@ -49,7 +53,7 @@ class MasterclassController extends Controller
 
     public function destroy($id)
     {
-        $masterclass = Masterclass::where('id', $id)->delete();
+        Masterclass::destroy($id);
 
         return redirect('home');
     }
