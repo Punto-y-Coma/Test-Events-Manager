@@ -49,7 +49,6 @@ class MasterclassController extends Controller
         Masterclass::addToPivotTable($masterclass);
 
         return redirect('home');
-
     }
 
     public function destroy($id)
