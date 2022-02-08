@@ -49,9 +49,8 @@ class MasterclassController extends Controller
 
     public function destroy($id)
     {
-        $masterclass = Masterclass::where('id', $id)->delete();
+        Masterclass::destroy($id);
 
         return redirect('home');
     }
-
 }
