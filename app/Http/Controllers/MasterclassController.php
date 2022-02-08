@@ -29,10 +29,14 @@ class MasterclassController extends Controller
         {
             $data['featured'] = 0;
         }
+
+        if($request->hasFile('image')){
+            $data['image']=$request->file('image')->store('uploads','public');
+        }
     
         /* d/m/Y  ->  Y-m-d */
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
-        $newData = Masterclass::create($data);
+        Masterclass::create($data);
         return $this->index();
     }
 
