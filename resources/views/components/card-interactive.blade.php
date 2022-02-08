@@ -9,7 +9,7 @@
           {{ $date }} - {{ $time }}
         </h6>
         <h6 class="card-subtitle mb-2 text-muted">
-          {{ $vacants }} plazas
+          {{ $masterclass->users()->count() }} / {{ $vacants }} plazas
         </h6>
       </div>
       <p class="card-text">
@@ -31,6 +31,10 @@
               </i>
             </button>
   
+            @elseif ($masterclass->users()->count() >= $masterclass->vacants)
+
+              <button class="btn btn-secondary inscription-btn-maxed-out">Plazas llenas</button>
+
             @else
               <a href="{{ route('subscribe', $id) }}" class="btn btn-secondary">Inscríbete</a>
             @endif
