@@ -4,7 +4,13 @@
 
     @foreach ($masterclasses_featured as $featured_masterclass)
 
-      <button type="button" data-bs-target="#featured-slider" data-bs-slide-to="{{ $loop->index }}" class="{{ $loop->index ? 'active' : '' }}" aria-current="{{ $loop->index ? 'true' : '' }}" aria-label="Slide {{ $loop->index }}"></button>
+      <button type="button" data-bs-target="#featured-slider" data-bs-slide-to="{{ $loop->index }}"
+        
+        @class([ 
+            'active' => ($loop->index == 0)
+        ])
+        
+        aria-current="{{ ($loop->index == 0) ? 'true' : '' }}" aria-label="Slide {{ $loop->index }}"></button>
 
     @endforeach
 
