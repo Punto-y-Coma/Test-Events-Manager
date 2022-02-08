@@ -1,16 +1,15 @@
 <div id="featured-slider" class="carousel slide" data-ride="carousel">
+
   <div class="carousel-indicators">
-    <ol>
 
-      @foreach ($masterclasses_featured as $featured_masterclass)
+    @foreach ($masterclasses_featured as $featured_masterclass)
 
-      <li data-target="#featured-slider" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
+      <button type="button" data-bs-target="#featured-slider" data-bs-slide-to="{{ $loop->index }}" class="{{ $loop->index ? 'active' : '' }}" aria-current="{{ $loop->index ? 'true' : '' }}" aria-label="Slide {{ $loop->index }}"></button>
 
-      @endforeach
-      
-    </ol>
+    @endforeach
 
   </div>
+
   <div class="carousel-inner">
 
     @foreach ($masterclasses_featured as $featured_masterclass)
