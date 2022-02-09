@@ -1,0 +1,20 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import '~bootstrap/scss/bootstrap';
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Reset
+@import 'reset';
+
+// Custom styles
+@import 'card';
+@import 'slider';
+@import 'edit';
+@import 'create';
+@import 'custom';
+@import 'nav';
+@import 'layout';
