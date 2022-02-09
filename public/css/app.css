@@ -22643,6 +22643,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cards-section {
+  margin: 4rem auto;
+}
+
 .cards-container {
   margin-top: 6rem;
 }
@@ -23045,6 +23049,11 @@ body .header-nav, body footer {
   background: #222222;
   color: #E5E5E5;
   padding: 1.5rem;
+}
+body .main-container, body .header-container {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 body footer {
   display: flex;
