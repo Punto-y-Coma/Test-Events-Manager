@@ -20,7 +20,7 @@ class MasterclassFactory extends Factory
             'vacants' => $this->faker->numberBetween(1,25),
             'description' => $this->faker->text(),
             'image' => 'uploads/3xK2hI4cTNGIeZcxPNxNhElB3DOHBSPsiDuxngJY.jpg',
-            'featured' => false,
+            'featured' => $this->faker->numberBetween(0,1),
         ];
     }
 }
