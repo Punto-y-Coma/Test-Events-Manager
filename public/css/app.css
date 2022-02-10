@@ -23048,27 +23048,31 @@ body {
 body .header-nav, body footer {
   background: #222222;
   color: #E5E5E5;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
-body .main-container, body .header-container {
+body main {
+  margin: 0 auto 4rem;
+}
+body .main-container, body .header-container, body .edit-masterclasses-container, body .footer-container {
   width: 80%;
   max-width: 80%;
   margin: 0 auto;
+  padding: 0;
 }
-body footer {
+body .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-body footer #social-media-links {
+body .footer-container #social-media-links {
   display: flex;
   flex-direction: row;
 }
-body footer svg {
+body .footer-container svg {
   margin: 0 0.5rem 0 0.5rem;
 }
-body footer p {
+body .footer-container p {
   margin: 0 0.5rem 0 0.5rem;
 }
 
