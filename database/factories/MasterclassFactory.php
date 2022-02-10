@@ -19,8 +19,12 @@ class MasterclassFactory extends Factory
             'time' => $this->faker->time(),
             'vacants' => $this->faker->numberBetween(1,25),
             'description' => $this->faker->text(),
-            'image' => 'https://picsum.photos/200/100',
-            'featured' => false,
+            'image' => 'uploads/3xK2hI4cTNGIeZcxPNxNhElB3DOHBSPsiDuxngJY.jpg',
+            'featured' => $this->faker->numberBetween(0,1),
         ];
     }
 }
+
+
+
+//'image' => 'https://picsum.photos/200/100',

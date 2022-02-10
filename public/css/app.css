@@ -22643,6 +22643,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cards-section {
+  margin: 4rem auto;
+}
+
 .cards-container {
   margin-top: 6rem;
 }
@@ -22690,6 +22694,14 @@ body {
 }
 .cards-container .card .card-body .card-btns .btn {
   color: #E5E5E5;
+  font-weight: bold;
+  margin: 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.cards-container .card .card-body .card-btns .inscription-btn-maxed-out {
+  background: #b1c0ce;
+  color: #3E3E3E;
   font-weight: bold;
   margin: 1rem;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
@@ -23036,22 +23048,31 @@ body {
 body .header-nav, body footer {
   background: #222222;
   color: #E5E5E5;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
-body footer {
+body main {
+  margin: 0 auto 4rem;
+}
+body .main-container, body .header-container, body .create-container, body .edit-masterclasses-container, body .footer-container {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+body .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-body footer #social-media-links {
+body .footer-container #social-media-links {
   display: flex;
   flex-direction: row;
 }
-body footer svg {
+body .footer-container svg {
   margin: 0 0.5rem 0 0.5rem;
 }
-body footer p {
+body .footer-container p {
   margin: 0 0.5rem 0 0.5rem;
 }
 

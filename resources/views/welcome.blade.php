@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="container">
+  @include('pages.featuredClasses')
+  <div class="container main-container">
 
     @include('pages.nextClasses')
     @include('pages.previousClasses')

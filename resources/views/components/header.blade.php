@@ -1,5 +1,5 @@
 <nav class="header-nav navbar navbar-expand-md navbar-dark shadow-sm">
-    <div class="container">
+    <div class="header-container d-flex align-items-center">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Factoría Masterclasses') }}
         </a>

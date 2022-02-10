@@ -1,8 +1,10 @@
 <section class="cards-section">
 
+  <a name="previousClasses"></a>
+
   <h1 class="display-6 mb-5 section-title"><span class="section-title-line">MASTERCLASES FINALIZADAS</span></h1>
 
-  <div class="container cards-container">
+  <div class="cards-container">
     <div class="row justify-content-evenly gap-5">
 
       @foreach ($masterclasses_out_date as $masterclass)            
@@ -22,7 +24,7 @@
   </div>
 
   <div class="d-flex justify-content-end">
-    {!! $masterclasses_out_date->appends(['masterclasses' => $masterclasses->currentPage()])->links() !!}
+    {!! $masterclasses_out_date->appends(['masterclasses' => $masterclasses->currentPage()])->fragment('previousClasses')->links() !!}
   </div>
 
 </section>
