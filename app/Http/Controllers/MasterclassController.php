@@ -57,4 +57,16 @@ class MasterclassController extends Controller
 
         return redirect('home');
     }
+
+    public function edit($id)
+    {
+        $data = Masterclass::findOrFail($id);
+
+        return view('pages.masterclass.edit', compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+    }
 }
