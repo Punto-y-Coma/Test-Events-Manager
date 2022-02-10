@@ -1,4 +1,4 @@
-<img src="{{ $image }}" class="d-block w-100" alt="{{ $name }}">
+<img src="{{ asset('storage').'/'.$image }}" class="d-block w-100" alt="{{ $name }}">
 <div class="carousel-caption d-none d-md-block">
   <h5>{{ $name }}</h5>
   <p>{{ \Carbon\Carbon::parse($date)->format('d/m/Y')}} - {{ $vacants }} plazas</p>

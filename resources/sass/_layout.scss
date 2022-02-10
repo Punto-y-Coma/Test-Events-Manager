@@ -6,10 +6,21 @@ body {
     .header-nav, footer {
         background      : $second-color;
         color           : $first-color;
-        padding         : 1.5rem;
+        padding         : 1.5rem 0;
     }
-     
-    footer {
+
+    main {
+        margin: 0 auto 4rem;
+    }
+
+    .main-container, .header-container, .create-container, .edit-masterclasses-container, .footer-container {
+        width: 80%;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .footer-container {
         display: flex;
         justify-content: space-between;
         align-items: center;

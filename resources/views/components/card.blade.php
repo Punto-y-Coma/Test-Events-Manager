@@ -1,5 +1,5 @@
-<div class="card col-lg-4 col-md-6 col-xs-12">
-  <img src="{{ $image }}" class="card-img-top" alt="{{ $name }}">
+<div class="card col-xl-2 col-lg-4 col-md-6 col-xs-12">
+  <img src="{{ asset('storage').'/'.$image }}" class="card-img-top" alt="{{ $name }}">
   
   <div class="card-body">
     <h5 class="card-title">{{ $name }}</h5>

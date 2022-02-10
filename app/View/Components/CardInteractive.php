@@ -6,6 +6,7 @@ use Illuminate\View\Component;
 
 class CardInteractive extends Component
 {
+    public $masterclass;
     public $id;
     public $name;
     public $date;
@@ -20,8 +21,9 @@ class CardInteractive extends Component
      *
      * @return void
      */
-    public function __construct($id, $name, $date, $time, $vacants, $description, $image, $featured)
+    public function __construct($id, $name, $date, $time, $vacants, $description, $image, $featured, $masterclass)
     {
+        $this->masterclass = $masterclass;
         $this->id = $id;
         $this->name = $name;
         $this->date = $date;
