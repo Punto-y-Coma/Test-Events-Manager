@@ -28,7 +28,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('subscribe', function () {
     $mail = new Subscribemail;
     Mail::to('emmafecor@hotmail.com')->send($mail);
-    return ('Enhorabuena, estas subscrito');
+    return "Enhorabuena, estas subscrito";
 });
 
 /* 
