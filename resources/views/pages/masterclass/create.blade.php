@@ -38,7 +38,6 @@
             <div class="form mb-3">
                 <label for="image">Imagen de la Masterclass</label>
                 <input type="file" class="form-control" id="image" name="image" placeholder="Imagen" required>
-                {{-- <input type="url" class="form-control" id="image" name="image" placeholder="https://example.com" pattern="https://.*" size="38" required> --}}
             </div>
 
             <div class="create-masterclass-btns">
