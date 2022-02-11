@@ -39,7 +39,7 @@ class MasterclassController extends Controller
         /* d/m/Y  ->  Y-m-d */
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
         Masterclass::create($data);
-        return $this->index();
+        return redirect('home');
     }
 
     public function subscribe($id)
@@ -69,13 +69,14 @@ class MasterclassController extends Controller
     {
         $data = $request->except(['_token', '_method']);
 
-        if (count($data) == 5 || (count($data) == 6 && $request->hasFile('image'))) {
+        if ((count($data) == 5) || (count($data) == 6 && $request->hasFile('image'))) {
             $data['featured'] = 0;
         }
 
-        if(count($data) == 6 && !$request->hasFile('image')) {
-            $data['featured'] = 1;
-        }
+        // if((count($data) == 6) && !($request->hasFile('image'))) {
+        //     $data['featured'] = 1;
+        //     echo "Está featured y no tiene imagen";
+        // }       
 
         if($request->hasFile('image')){
             $data['image']=$request->file('image')->store('uploads','public');
