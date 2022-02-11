@@ -66,6 +66,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+
+                                <a href="{{ route('welcome')}}" alt="home" class="btn btn-secondary mb-3">
+                                    Cancelar
+                                </a>
                             </div>
                         </div>
                     </form>

@@ -7,12 +7,13 @@
     <h1 class="display-6 mb-5 section-title"><span class="section-title-line">Editar masterclass</span></h1>
 
     <div>
-        <form action="{{ route('masterclass.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('masterclass.update', $data->id) }}" method="post" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
 
             <div class="form-floating mb-3 mt-3">
-                <input type="text" class="form-control" id="title" name="name" placeholder="Título de la MasterClass" required>
-                <label for="title">{{ $data->name }}</label>
+                <input type="text" class="form-control" id="title" name="name" placeholder="Título de la MasterClass" required value="{{ $data->name }}">
+                <label for="title">Título de la MasterClass</label>
             </div>
 
             <div class="form-floating mb-3">
@@ -44,14 +45,25 @@
 
             <div class="create-masterclass-btns">
                 <input class="btn btn-primary mb-3" type="submit" value="Guardar">
-                <input class="btn btn-secondary mb-3" type="reset" value="Cancelar">
+                <a href="{{ route('home')}}" alt="home" class="btn btn-secondary mb-3">
+                    Cancelar
+                </a>
 
-                <div class="form-check">
-                    <input class="form-check-input form-control" type="checkbox" value="1" id="featured" name="featured" checked>
-                    <label class="form-check-label" for="featured">
-                      Destacada
-                    </label>
-                </div>
+                @if($data->featured != 0)
+                    <div class="form-check">
+                        <input class="form-check-input form-control" type="checkbox" value="1" id="featured" name="featured" checked>
+                        <label class="form-check-label" for="featured">
+                          Destacada
+                        </label>
+                    </div>
+                @else 
+                    <div class="form-check">
+                        <input class="form-check-input form-control" type="checkbox" value="0" id="featured" name="featured">
+                        <label class="form-check-label" for="featured">
+                          Destacada
+                        </label>
+                    </div>
+                @endif
             </div>
 
             <script>

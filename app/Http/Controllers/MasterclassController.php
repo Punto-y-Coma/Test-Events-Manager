@@ -67,6 +67,29 @@ class MasterclassController extends Controller
 
     public function update(Request $request, $id)
     {
-        $data = $request->all();
+        $data = $request->except(['_token', '_method']);
+
+        if (count($data) == 5 || (count($data) == 6 && $request->hasFile('image'))) {
+            $data['featured'] = 0;
+        }
+
+        if(count($data) == 6 && !$request->hasFile('image')) {
+            $data['featured'] = 1;
+        }
+
+        if($request->hasFile('image')){
+            $data['image']=$request->file('image')->store('uploads','public');
+        }
+        
+        $actual = Masterclass::find($id);
+
+        /* d/m/Y  ->  Y-m-d */
+        if($data['date'] != $actual->date) {
+            $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
+        }
+
+        Masterclass::where('id', $id)->update($data);
+
+        return redirect('home');
     }
 }
