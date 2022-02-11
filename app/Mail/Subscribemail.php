@@ -6,11 +6,13 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\Htpp\Controller\MasterclassController;
 
 class Subscribemail extends Mailable
 {
     use Queueable, SerializesModels;
     Public $subject = "Enhorabuena, estas suscrito";
+    Public $contacto = "Esta es la información de contacto";
     /**
      * Create a new message instance.
      *

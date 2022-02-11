@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Masterclass;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\Subscribemail;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class MasterclassController extends Controller
 {
@@ -47,6 +51,13 @@ class MasterclassController extends Controller
         $masterclass = Masterclass::find($id);
 
         Masterclass::addToPivotTable($masterclass);
+
+        //$course = $masterclass->name;
+
+        $mail = new Subscribemail;
+        // $user_mail = 
+        // Mail::to($user_email)->send($mail);
+        Mail::to('prueba@prueba.com')->send($mail);
 
         return redirect('home');
     }
