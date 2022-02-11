@@ -69,14 +69,18 @@ class MasterclassController extends Controller
     {
         $data = $request->except(['_token', '_method']);
 
+        //dd(count($data));
+
+        //dd($data['featured']);
+
         if ((count($data) == 5) || (count($data) == 6 && $request->hasFile('image'))) {
             $data['featured'] = 0;
         }
 
-        // if((count($data) == 6) && !($request->hasFile('image'))) {
-        //     $data['featured'] = 1;
-        //     echo "Está featured y no tiene imagen";
-        // }       
+      /*   if((count($data) == 6) && !($request->hasFile('image'))) {
+             $data['featured'] = 1;
+             echo "Está featured y no tiene imagen";
+        }  */      
 
         if($request->hasFile('image')){
             $data['image']=$request->file('image')->store('uploads','public');

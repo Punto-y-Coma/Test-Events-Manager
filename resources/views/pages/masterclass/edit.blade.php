@@ -58,7 +58,7 @@
                     </div>
                 @else 
                     <div class="form-check">
-                        <input class="form-check-input form-control" type="checkbox" value="0" id="featured" name="featured">
+                        <input class="form-check-input form-control" type="checkbox" value="1" id="featured" name="featured">
                         <label class="form-check-label" for="featured">
                           Destacada
                         </label>
