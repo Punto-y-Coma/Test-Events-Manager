@@ -11,7 +11,7 @@ class MasterclassController extends Controller
 {
     public function index()
     {
-        $masterclasses = Masterclass::all()->paginate(6, ['*'], 'masterclasses');
+        $masterclasses = Masterclass::where('date', '>', date("Y-m-d"))->orderBy('date')->paginate(6, ['*'], 'masterclasses');
         $masterclasses_out_date = Masterclass::where('date', '<', date("Y-m-d"))->orderBy('date', 'desc')->paginate(4, ['*'], 'masterclasses_out_date');
         $masterclasses_featured = Masterclass::where('featured', 1)->get();
         return view('welcome', compact('masterclasses', 'masterclasses_out_date', 'masterclasses_featured'));
