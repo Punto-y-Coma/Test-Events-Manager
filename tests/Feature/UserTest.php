@@ -14,7 +14,21 @@ class UserTest extends TestCase
      *
      * @return void
      */
-     public function testUserIsAdmin()
+     public function test_user_is_admin()
+    {
+        // Given
+            $user = new User;
+        
+        // When
+            $expected = 1;
+            $user->is_admin = 1;
+            $actual = $user->is_admin;
+
+        // Then
+            $this->assertEquals($expected, $actual, "user is admin");
+    }
+
+    public function test_user_is_user()
     {
         // Given
             $user = new User;
@@ -24,7 +38,91 @@ class UserTest extends TestCase
             $actual = $user->is_admin;
 
         // Then
-            $this->assertEquals($expected, $actual, "user isn't admin");
+            $this->assertEquals($expected, $actual, "user is user");
+    }
+
+    public function test_register_mail_sent()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_register_mail_user_data()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_register_mail_content()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_register_form_user_is_validated()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_login_form_user_is_validated()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+   
+    public function test_create_user()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_delete_user()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+    
+    public function test_edit_user()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_store_user()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_index_user()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_user_is_registered()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_user_is_logged_in()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
     }
 }
 
