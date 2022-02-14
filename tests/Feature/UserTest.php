@@ -9,6 +9,7 @@ use App\Models\User;
 
 class UserTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -41,7 +42,7 @@ class UserTest extends TestCase
             $this->assertEquals($expected, $actual, "user is user");
     }
 
-    public function test_register_mail_sent()
+   /*  public function test_register_mail_sent()
     {
         $response = $this->get('/');
 
@@ -67,13 +68,20 @@ class UserTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-    }
+    } */
 
     public function test_login_form_user_is_validated()
     {
-        $response = $this->get('/');
+        // Given
+        $user = new User;
+        
+        // When
+            $expected = 1;
+            $user->is_admin = 1;
+            $actual = $user->is_admin;
 
-        $response->assertStatus(200);
+        // Then
+            $this->assertEquals($expected, $actual, "user is admin");
     }
    
     public function test_create_user()

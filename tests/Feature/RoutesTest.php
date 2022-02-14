@@ -8,6 +8,7 @@ use Tests\TestCase;
 
 class RoutesTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -15,51 +16,87 @@ class RoutesTest extends TestCase
      */
     public function test_welcome()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        //Given
+        $response = $this->get(route('welcome'));
+        //When
+        //Then
+        $response->assertStatus(200)
+                 ->assertViewIs('welcome');
     }
 
     public function test_home()
     {
-        $response = $this->get('/');
+          //Given
+        $user = new User;
+        $response = $this->get(route('pages.home'));
 
-        $response->assertStatus(200);
+        //When
+        //user is registered and login
+
+        //Then
+        $response->assertStatus(200)
+                 ->assertViewIs('pages.home');
     }
 
     public function test_admin_dashboard()
     {
-        $response = $this->get('/');
+          //Given
+        $response = $this->get(route('pages.admin'));
 
-        $response->assertStatus(200);
+        //When
+        //user is registered and login
+
+        //Then
+        $response->assertStatus(200)
+                 ->assertViewIs('pages.admin');
     }
 
     public function test_register_form()
     {
-        $response = $this->get('/');
+        //Given
+        $response = $this->get(route('welcome'));
 
-        $response->assertStatus(200);
+        //When
+
+        //Then
+        $response->assertStatus(200)
+                 ->assertViewIs('welcome');
     }
 
     public function test_login_form()
     {
-        $response = $this->get('/');
+          //Given
+        $response = $this->get(route('welcome'));
 
-        $response->assertStatus(200);
+        //When
+
+        //Then
+        $response->assertStatus(200)
+                 ->assertViewIs('welcome');
     }
 
     public function test_create_masterclass_form()
     {
-        $response = $this->get('/');
+          //Given
+        $response = $this->get(route('welcome'));
 
-        $response->assertStatus(200);
+        //When
+
+        //Then
+        $response->assertStatus(200)
+                 ->assertViewIs('welcome');
     }
 
     public function test_edit_masterclass_form()
     {
-        $response = $this->get('/');
+          //Given
+        $response = $this->get(route('welcome'));
 
-        $response->assertStatus(200);
+        //When
+
+        //Then
+        $response->assertStatus(200)
+                 ->assertViewIs('welcome');
     }
 
 }

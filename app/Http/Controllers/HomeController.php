@@ -30,6 +30,7 @@ class HomeController extends Controller
         if (auth()->user()->is_admin === 1) {
             return view('pages.admin', $datos);
         }
+        
         else {
             // Que queremos hacer:
             // Listar las masterclasses del usuario logueado
