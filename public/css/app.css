@@ -22987,6 +22987,14 @@ b, strong {
   box-shadow: 0 0 0 0.2rem rgba(72, 160, 6, 0.8) !important;
 }
 
+.btn-accept {
+  margin: 0 !important;
+}
+
+.create-container div form .create-masterclass-btns .form-check, .edit-container div form .edit-masterclass-btns .form-check {
+  margin-bottom: 0 !important;
+}
+
 .btn-cancel {
   margin: 0 0.5rem !important;
 }
@@ -23126,14 +23134,6 @@ body .footer-container p {
   }
   .edit-masterclasses-container .edit-masterclasses-table tr > :first-child {
     padding-left: 0.5rem;
-  }
-
-  .create-container .btn-accept, .edit-container .btn-accept {
-    margin: 0 !important;
-  }
-
-  .create-container div form .create-masterclass-btns .form-check, .edit-container div form .edit-masterclass-btns .form-check {
-    margin-bottom: 0 !important;
   }
 }
 @media (max-width: 700px) {
