@@ -23101,10 +23101,20 @@ body .footer-container p {
 
 @media (max-width: 420px) {
   .header-container {
+    flex-direction: column;
     justify-content: space-between;
+  }
+  .header-container > * {
+    margin: 0.5rem;
   }
   .header-container .navbar-brand {
     font-size: 1rem;
+  }
+  .header-container button.navbar-toggler {
+    margin: 0 auto;
+  }
+  .header-container ul.navbar-nav > * {
+    margin: 0.5rem;
   }
 
   .register-link {

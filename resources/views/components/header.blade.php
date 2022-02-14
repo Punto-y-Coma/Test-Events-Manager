@@ -1,64 +1,66 @@
 <nav class="header-nav navbar navbar-expand-md navbar-dark shadow-sm">
-    <div class="header-container d-flex align-items-center">
+    <div class="header-container d-flex align-items-center justify-content-between">
         <a class="navbar-brand xs-10" href="{{ url('/') }}">
             {{ config('app.name', 'Factoría Masterclasses') }}
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
-
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ms-auto">
-                <!-- Authentication Links -->
-                @guest
-                    @if (Route::has('login'))
-                        <li class="nav-item welcome-header-btn">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Inicia sesión') }}</a>
-                        </li>
-                    @endif
-
-                    @if (Route::has('register'))
-                        <li class="nav-item welcome-header-btn welcome-header-register-btn">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
-                        </li>
-                    @endif
-                @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-
-                            <a class="dropdown-item" href="{{ url('/') }}">Inicio</a>
-
-                            @if(Auth::user()->is_admin === 1 )
-                                <a class="dropdown-item" href="{{ url('/home') }}">Editar masterclasses</a>
+        <div class="nav-menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
     
-                            @else 
-                                <a class="dropdown-item" href="{{ url('/home') }}">Mis masterclasses</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav me-auto">
     
-                            @endif
-
-                            <a class="dropdown-item dropdown-last-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                {{ __('Cerrar sesión') }}
+                </ul>
+    
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item welcome-header-btn">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Inicia sesión') }}</a>
+                            </li>
+                        @endif
+    
+                        @if (Route::has('register'))
+                            <li class="nav-item welcome-header-btn welcome-header-register-btn">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
                             </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                @endguest
-            </ul>
+    
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+    
+                                <a class="dropdown-item" href="{{ url('/') }}">Inicio</a>
+    
+                                @if(Auth::user()->is_admin === 1 )
+                                    <a class="dropdown-item" href="{{ url('/home') }}">Editar masterclasses</a>
+        
+                                @else 
+                                    <a class="dropdown-item" href="{{ url('/home') }}">Mis masterclasses</a>
+        
+                                @endif
+    
+                                <a class="dropdown-item dropdown-last-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar sesión') }}
+                                </a>
+    
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
