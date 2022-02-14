@@ -40,7 +40,6 @@
                 <label for="image">Imagen de la Masterclass</label>
                 <img src="{{ asset('storage').'/'.$data->image }}" alt="{{ $data->name }}">
                 <input type="file" class="form-control" id="image" name="image" placeholder="Image" value="{{ $data->image }}">
-                {{-- <input type="url" class="form-control" id="image" name="image" placeholder="https://example.com" pattern="https://.*" size="38" required> --}}
             </div>
 
             <div class="create-masterclass-btns">
