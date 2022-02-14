@@ -51,11 +51,24 @@ body {
 
 @media (max-width: 420px) {
     .header-container {
+        flex-direction: column;
         justify-content: space-between;
+
+        &> * {
+            margin: 0.5rem;
+        }
 
         .navbar-brand {
             font-size: 1rem;
         } 
+
+        button.navbar-toggler {
+            margin: 0 auto;
+        }
+
+        ul.navbar-nav > * {
+            margin: 0.5rem;
+        }
     }
 
     .register-link {
@@ -82,7 +95,7 @@ body {
         margin-bottom: 0 !important;
     }
     
-  }
+}
 
 @media (max-width: 700px) {
   header {
