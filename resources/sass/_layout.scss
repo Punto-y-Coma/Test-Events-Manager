@@ -13,11 +13,19 @@ body {
         margin: 0 auto 4rem;
     }
 
-    .main-container, .header-container, .create-container, .edit-masterclasses-container, .footer-container {
+    .main-container, .header-container, .footer-container {
         width: 80%;
         max-width: 80%;
-        margin: 0 auto;
         padding: 0;
+    }
+
+    .header-container, .footer-container {
+        margin: 0 auto;
+    }
+
+    .main-container {
+        margin: 4rem auto;
+        flex: 1 0 auto;
     }
 
     .footer-container {

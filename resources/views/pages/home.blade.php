@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container cards-section">
+<div class="container main-container cards-section">
 
     <h1 class="display-6 mb-5 section-title"><span class="section-title-line">Mis masterclass</span></h1>
 
@@ -25,10 +25,6 @@
   
       </div>
     </div> 
-
-    {{-- <div class="d-flex justify-content-end">
-      {!! $user_events->links() !!}
-    </div> --}}
 
 </div>
 

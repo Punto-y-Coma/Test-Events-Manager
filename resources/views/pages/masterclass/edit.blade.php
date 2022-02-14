@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container create-container">
+<div class="container main-container create-container">
 
     <h1 class="display-6 mb-5 section-title"><span class="section-title-line">Editar masterclass</span></h1>
 
@@ -44,7 +44,7 @@
 
             <div class="create-masterclass-btns">
                 <input class="btn btn-primary mb-3" type="submit" value="Guardar">
-                <a href="{{ route('home')}}" alt="home" class="btn btn-secondary mb-3">
+                <a href="{{ route('home')}}" alt="home" class="btn btn-secondary mb-3 btn-cancel">
                     Cancelar
                 </a>
 

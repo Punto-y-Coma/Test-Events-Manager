@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container edit-masterclasses-container">
+<div class="container main-container edit-masterclasses-container">
 
     <h1 class="display-6 mb-5 section-title"><span class="section-title-line">Editar masterclasses</span></h1>
 

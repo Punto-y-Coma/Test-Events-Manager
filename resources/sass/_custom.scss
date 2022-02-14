@@ -1,3 +1,7 @@
+b, strong {
+    font-weight: bolder !important;
+}
+
 /* Selected text */
 ::selection {
     background              : $first-color;
@@ -78,6 +82,19 @@
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
     box-shadow              : 0 0 0 0.2rem rgba(72, 160, 6, 0.8) !important;
+}
+
+.btn-cancel {
+    margin: 0 0.5rem !important;
+}
+
+.btn-forgot {
+    margin: 0.8rem 0;
+    padding: 0;
+}
+
+.register-link {
+    display: inline-block;
 }
 
 /* Pagination */
