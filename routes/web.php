@@ -26,6 +26,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/subscribe/{id}', [MasterclassController::class, 'subscribe'])->name('subscribe')->middleware('auth');
 
+
 /* 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/pages/masterclass/create',[MasterclassController::class,'create']); 
