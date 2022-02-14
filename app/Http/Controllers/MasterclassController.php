@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Masterclass;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\Subscribemail;
+use Illuminate\Support\Facades\Mail;
 
 class MasterclassController extends Controller
 {
@@ -45,11 +48,22 @@ class MasterclassController extends Controller
     public function subscribe($id)
     {
         $masterclass = Masterclass::find($id);
-
         Masterclass::addToPivotTable($masterclass);
+        
+        foreach ($masterclass->users as $table_users) { 
+            $table_users = $table_users->pivot->user_id;
+        } 
+        
+        $user_email = User::find($table_users)->email;
+        $user_name = User::find($table_users)->name;
+        $class_name = $masterclass->name;
+        
+        $mail = new Subscribemail($class_name, $user_name);
+        Mail::to($user_email)->send($mail);
 
         return redirect('home');
     }
+
 
     public function destroy($id)
     {

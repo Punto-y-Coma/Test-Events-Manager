@@ -10,15 +10,20 @@ use Illuminate\Queue\SerializesModels;
 class Subscribemail extends Mailable
 {
     use Queueable, SerializesModels;
+
     Public $subject = "Enhorabuena, estas suscrito";
+    public $class_name;
+    public $user_name;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($class_name, $user_name)
     {
-        //
+       $this->class_name = $class_name;
+       $this->user_name = $user_name;
     }
 
     /**
@@ -28,6 +33,8 @@ class Subscribemail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.subscribe');
+        $usernameMail ['user_name'] = $this->user_name;
+        $courseMail ['class_name'] = $this->class_name;
+        return $this->view('mail.subscribe', $usernameMail, $courseMail);
     }
 }
