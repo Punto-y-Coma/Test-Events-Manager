@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MasterclassController;
+use App\Mail\Subscribemail;
+use Illuminate\Support\Facades\Mail;
 
+// use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +26,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/subscribe/{id}', [MasterclassController::class, 'subscribe'])->name('subscribe')->middleware('auth');
 
+
 /* 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/pages/masterclass/create',[MasterclassController::class,'create']); 
@@ -32,3 +36,5 @@ CON EL MÉTODO RESOURCE YA SE TIENE ACCESO A TODOS LOS MÉTODOS DEL CONTROLADOR 
 */
 
 Route::resource('/pages/masterclass', MasterclassController::class);
+
+// Route::get('/send-email', [MailController::class, 'sendemail']); 

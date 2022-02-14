@@ -37,4 +37,5 @@ class Masterclass extends Model
         $masterclass->users()->attach(Auth::user());
     }
 
+
 }
