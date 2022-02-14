@@ -41,7 +41,7 @@
             </div>
 
             <div class="create-masterclass-btns">
-                <input class="btn btn-primary mb-3" type="submit" value="Aceptar">
+                <input class="btn btn-primary mb-3 btn-accept" type="submit" value="Aceptar">
                 <a href="{{ route('home')}}" alt="home" class="btn btn-secondary mb-3 btn-cancel">
                     Cancelar
                 </a>
