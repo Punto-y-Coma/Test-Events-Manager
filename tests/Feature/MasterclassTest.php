@@ -125,9 +125,12 @@ class MasterclassTest extends TestCase
 
     public function test_index_masterclass()
     {
-        $response = $this->get('/');
+        $masterclass = Masterclass::all();
 
-        $response->assertStatus(200);
+        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
+
+        $response->assertStatus(200)
+                 ->assertViewIs('welcome');
     }
 
     public function test_load_masterclass_image_in_form_via_url()
