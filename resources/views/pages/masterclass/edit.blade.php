@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required value="{{ $data->vacants }}">
+                <input type="number" min="1" pattern="\d+" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required value="{{ $data->vacants }}">
                 <label for="plazas">Plazas</label>
             </div>
 
