@@ -61,13 +61,6 @@ class MasterclassController extends Controller
         $mail = new Subscribemail($class_name, $user_name);
         Mail::to($user_email)->send($mail);
 
-        //$course = $masterclass->name;
-
-        $mail = new Subscribemail;
-        // $user_mail = 
-        // Mail::to($user_email)->send($mail);
-        Mail::to('prueba@prueba.com')->send($mail);
-
         return redirect('home');
     }
 
