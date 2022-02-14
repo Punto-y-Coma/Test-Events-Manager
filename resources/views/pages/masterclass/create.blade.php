@@ -26,24 +26,25 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required>
+                <input type="number" min="1" pattern="\d+" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required>
                 <label for="plazas">Plazas</label>
             </div>
 
             <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Descripción de la MasterClass" id="descripcion" name="description" style="height: 100px"></textarea>
+                <textarea class="form-control" placeholder="Descripción de la MasterClass" id="descripcion" name="description" style="height: 100px" required></textarea>
                 <label for="descripcion">Descripción</label>
             </div>
 
             <div class="form mb-3">
                 <label for="image">Imagen de la Masterclass</label>
-                <input type="file" class="form-control" id="image" name="image" placeholder="Imagen">
-                {{-- <input type="url" class="form-control" id="image" name="image" placeholder="https://example.com" pattern="https://.*" size="38" required> --}}
+                <input type="file" class="form-control" id="image" name="image" placeholder="Imagen" required>
             </div>
 
             <div class="create-masterclass-btns">
                 <input class="btn btn-primary mb-3" type="submit" value="Aceptar">
-                <input class="btn btn-secondary mb-3" type="reset" value="Cancelar">
+                <a href="{{ route('home')}}" alt="home" class="btn btn-secondary mb-3">
+                    Cancelar
+                </a>
 
                 <div class="form-check">
                     <input class="form-check-input form-control" type="checkbox" value="1" id="featured" name="featured" checked>
