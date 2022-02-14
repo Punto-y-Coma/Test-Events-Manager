@@ -26,7 +26,7 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required>
+                <input type="number" min="1" pattern="\d+" class="form-control" id="plazas" name="vacants" placeholder="Plazas" required>
                 <label for="plazas">Plazas</label>
             </div>
 
