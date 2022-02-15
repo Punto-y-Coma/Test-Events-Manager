@@ -15,34 +15,65 @@ class UserTest extends TestCase
      *
      * @return void
      */
-     public function test_user_is_admin()
+      /* 
+    public function test_index_users()
+    { 
+         // Given
+
+         // When
+ 
+         // Then
+        
+    } */
+
+    public function test_create_user()
     {
         // Given
-            $user = new User;
-        
-        // When
-            $expected = 1;
-            $user->is_admin = 1;
-            $actual = $user->is_admin;
+        $user = User::factory(1)->create();
 
+        // When
+        $response = $this->post(route('user.store'), $user = ['user']);
+        
         // Then
-            $this->assertEquals($expected, $actual, "user is admin");
+        $response->assertStatus(201)
+                 ->assertSeeText($user->name)
+                 ->assertViewIs('pages.home');
     }
 
-    public function test_user_is_user()
+    public function test_delete_user()
     {
-        // Given
-            $user = new User;
-        
-        // When
-            $expected = 0;
-            $actual = $user->is_admin;
+       // Given
+       $user = User::factory(1)->create();
 
-        // Then
-            $this->assertEquals($expected, $actual, "user is user");
+       // When
+       $this->post(route('user.store'), $user = ['user']);
+       $response = $this->delete(route('user.destroy.{$user->id}'), $user = ['user']);
+       $expected = NULL;
+       $actual = $user->name;
+       
+       // Then
+       $this->assertEquals($expected, $actual, "user has been deleted");
     }
 
-   /*  public function test_register_mail_sent()
+    /* public function test_user_is_registered()
+    {
+        //Given
+
+        //When
+  
+        //Then
+    } */
+
+/*     public function test_user_is_logged_in()
+    {
+        //Given
+
+        //When
+  
+        //Then
+    } 
+    
+    public function test_register_mail_sent()
     {
         $response = $this->get('/');
 
@@ -68,7 +99,7 @@ class UserTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-    } */
+    } 
 
     public function test_login_form_user_is_validated()
     {
@@ -82,56 +113,7 @@ class UserTest extends TestCase
 
         // Then
             $this->assertEquals($expected, $actual, "user is admin");
-    }
-   
-    public function test_create_user()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
-    public function test_delete_user()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-    
-    public function test_edit_user()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
-    public function test_store_user()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
-    public function test_index_user()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
-    public function test_user_is_registered()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
-    public function test_user_is_logged_in()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
+    }*/
 }
 
 
@@ -150,3 +132,12 @@ class UserTest extends TestCase
 //     // Then
 //         $this->assertEquals($expected, $actual, "user is admin");
 // }
+
+ /* 
+ 
+ public function test_user_is_logged_in()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }*/

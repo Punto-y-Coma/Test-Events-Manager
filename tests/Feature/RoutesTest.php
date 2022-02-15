@@ -26,12 +26,13 @@ class RoutesTest extends TestCase
 
     public function test_home()
     {
-          //Given
+        //Given
         $user = new User;
-        $response = $this->get(route('pages.home'));
-
+        
         //When
+        $hey = $user->is_admin;
         //user is registered and login
+        $response = $this->get(route('pages.home'));
 
         //Then
         $response->assertStatus(200)
@@ -40,7 +41,7 @@ class RoutesTest extends TestCase
 
     public function test_admin_dashboard()
     {
-          //Given
+        //Given
         $response = $this->get(route('pages.admin'));
 
         //When
@@ -54,49 +55,41 @@ class RoutesTest extends TestCase
     public function test_register_form()
     {
         //Given
-        $response = $this->get(route('welcome'));
-
-        //When
+        $response = $this->get('/register');
 
         //Then
         $response->assertStatus(200)
-                 ->assertViewIs('welcome');
+                 ->assertViewIs('/register');
     }
 
     public function test_login_form()
     {
-          //Given
-        $response = $this->get(route('welcome'));
-
-        //When
-
+         //Given
+        $response = $this->get('/login');
+        
         //Then
         $response->assertStatus(200)
-                 ->assertViewIs('welcome');
+                 ->assertViewIs('/login');
     }
 
     public function test_create_masterclass_form()
     {
-          //Given
-        $response = $this->get(route('welcome'));
-
-        //When
-
-        //Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
+       //Given
+       $response = $this->get('masterclass.create');
+        
+       //Then
+       $response->assertStatus(200)
+                ->assertViewIs('pages.masterclass.create');
     }
 
-    public function test_edit_masterclass_form()
+   /*  public function test_edit_masterclass_form()
     {
-          //Given
-        $response = $this->get(route('welcome'));
-
-        //When
-
-        //Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
-    }
+         //Given
+       $response = $this->get('masterclass.edit');
+        
+       //Then
+       $response->assertStatus(200)
+                ->assertViewIs('pages.masterclass.edit');
+    } */
 
 }
