@@ -21,34 +21,33 @@ class MasterclassTest extends TestCase
         $masterclass = Masterclass::all();
 
         // When
-        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
+        $response = $this->get(route('welcome', $masterclass->toArray()));
 
         // Then
         $response->assertStatus(200)
                  ->assertViewIs('welcome');
     }
 
-    public function test_create_masterclass()
+   /*  public function test_create_masterclass()
     {
         // Given
         $masterclass = Masterclass::factory(1)->create();
 
         // When
-        $response = $this->post(route('masterclass.store'), $masterclass = ['masterclass']);
+        $response = $this->post(route('masterclass.store'), $masterclass->toArray());
         
         // Then
         $response->assertStatus(201)
-                 ->assertSeeText($masterclass->name)
-                 ->assertViewIs('pages.admin');
-    }
+                 ->assertViewIs('welcome');
+    } */
 
-    public function test_show_masterclass_card_view()
+   /*  public function test_show_masterclass_card_view()
     {
         // Given
         $masterclass = Masterclass::factory(1)->create();
 
         // When
-        $response = $this->post(route('masterclass.store'), $masterclass = ['masterclass']);
+        $response = $this->post(route('masterclass.store'), $masterclass->toArray());
         
         // Then
         $response->assertStatus(201)
@@ -84,7 +83,7 @@ class MasterclassTest extends TestCase
     
        $mclass = Masterclass::where('date', '>=', date("Y-m-d"))->orderBy('date', 'desc')->paginate(4, ['*'], 'masterclasses');
        
-       $response = $this->get(route('welcome', [$masterclasses => 'masterclasses']));
+       $response = $this->get(route('welcome', $masterclasses->toArray()));
        // Then
        $response->assertStatus(200)
                 ->assertViewHasAll($masterclasses)
@@ -103,12 +102,12 @@ class MasterclassTest extends TestCase
 
         $mclass = Masterclass::where('date', '<', date("Y-m-d"))->orderBy('date', 'desc')->paginate(4, ['*'], 'masterclasses_out_date');
         
-        $response = $this->get(route('welcome', [$masterclasses_out_date => 'masterclasses_out_date']));
+        $response = $this->get(route('welcome', $masterclasses_out_date->toArray()));
         // Then
         $response->assertStatus(200)
                  ->assertViewHasAll($masterclasses_out_date)
                  ->assertViewIs('welcome');
     }
-
+ */
 }
 

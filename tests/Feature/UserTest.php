@@ -16,7 +16,7 @@ class UserTest extends TestCase
      * @return void
      */
 
-    public function test_create_user()
+    /*   public function test_create_user()
     {
         // Given
         $user = User::factory(1)->create();
@@ -43,6 +43,6 @@ class UserTest extends TestCase
        
        // Then
        $this->assertEquals($expected, $actual, "user has been deleted");
-    }
+    } */
 
 }

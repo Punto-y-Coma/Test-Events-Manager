@@ -42,8 +42,7 @@ class MasterclassTest extends TestCase
         $this->assertEquals($expected, $actual, "masterclass is not featured");
     }
 
-
-    public function test_masterclass_vacants_are_filled()
+   /*  public function test_masterclass_vacants_are_filled()
     {
         // Given
         $masterclass = Masterclass::factory(1)->create();
@@ -107,6 +106,6 @@ class MasterclassTest extends TestCase
         $this->assertEquals($expected, $actual, "masterclass is out of date");
 
   
-    }
+    } */
     
 }
