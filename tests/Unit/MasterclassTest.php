@@ -108,33 +108,5 @@ class MasterclassTest extends TestCase
 
   
     }
-
-    /* 
-    public function test_load_masterclass_image_in_form_via_url()
-    {
-       // Given
-       $masterclass = Masterclass::all();
-
-        // When
-        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
-
-        // Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
-    }
-
-    public function test_load_masterclass_image_in_form_from_local()
-    {
-       // Given
-        $masterclass = Masterclass::all();
-
-        // When
-        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
-
-        // Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
-    } */
-
     
 }

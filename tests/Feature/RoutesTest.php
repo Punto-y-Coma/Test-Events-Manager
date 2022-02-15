@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\User;
 
 class RoutesTest extends TestCase
 {
@@ -30,9 +31,8 @@ class RoutesTest extends TestCase
         $user = new User;
         
         //When
-        $hey = $user->is_admin;
-        //user is registered and login
-        $response = $this->get(route('pages.home'));
+        $role = $user->is_admin;
+        $response = $this->get('/home');
 
         //Then
         $response->assertStatus(200)
@@ -42,10 +42,12 @@ class RoutesTest extends TestCase
     public function test_admin_dashboard()
     {
         //Given
-        $response = $this->get(route('pages.admin'));
-
+        $user = new User;
+        
         //When
-        //user is registered and login
+        $user->is_admin = 1;
+        $role = $user->is_admin;
+        $response = $this->get('/home');
 
         //Then
         $response->assertStatus(200)
@@ -59,7 +61,7 @@ class RoutesTest extends TestCase
 
         //Then
         $response->assertStatus(200)
-                 ->assertViewIs('/register');
+                 ->assertViewIs('auth.register');
     }
 
     public function test_login_form()
@@ -69,27 +71,18 @@ class RoutesTest extends TestCase
         
         //Then
         $response->assertStatus(200)
-                 ->assertViewIs('/login');
+                 ->assertViewIs('auth.login');
     }
 
     public function test_create_masterclass_form()
     {
        //Given
-       $response = $this->get('masterclass.create');
+       $response = $this->get(route('masterclass.create'));
         
        //Then
        $response->assertStatus(200)
                 ->assertViewIs('pages.masterclass.create');
     }
 
-   /*  public function test_edit_masterclass_form()
-    {
-         //Given
-       $response = $this->get('masterclass.edit');
-        
-       //Then
-       $response->assertStatus(200)
-                ->assertViewIs('pages.masterclass.edit');
-    } */
 
 }

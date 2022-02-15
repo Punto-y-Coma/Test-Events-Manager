@@ -42,22 +42,6 @@ class MasterclassTest extends TestCase
                  ->assertViewIs('pages.admin');
     }
 
-   /*  public function test_edit_masterclass()
-    {
-        // Given
-        $masterclass = Masterclass::factory(1)->create();
-
-        // When
-        $this->post(route('masterclass.store'), $masterclass = ['masterclass']);
-        $masterclass->name = 'Masterclass editada';
-        $response = $this->post(route('masterclass.{$id}'), $masterclass = ['masterclass']);
-
-        // Then
-        $response->assertStatus(201)
-                 ->assertSeeText('Masterclass editada')
-                 ->assertViewIs('pages.admin');
-    } */
-
     public function test_show_masterclass_card_view()
     {
         // Given
@@ -76,10 +60,10 @@ class MasterclassTest extends TestCase
     {
        // Given
        $masterclass = Masterclass::factory(1)->create();
-
+       $id = $masterclass->id;
        // When
-       $response = $this->post(route('masterclass.store'), $masterclass = ['masterclass']);
-       $response = $this->delete(route('masterclass.destroy.{$masterclass->id}'), $masterclass = ['masterclass']);
+       $response = $this->post(route('masterclass.store'), $masterclass->toArray());
+       $response = $this->delete(route(`masterclass.destroy.{$id}`), $masterclass);
 
        // Then
        $response->assertStatus(200)
@@ -91,20 +75,19 @@ class MasterclassTest extends TestCase
     public function test_next_masterclasses_pagination()
     {
        // Given
-       $masterclasses_out_date = Masterclass::factory(3)->create();
+       $masterclasses = Masterclass::factory(3)->create();
         
        // When
-       $masterclasses_out_date->toArray();
-       $mclass[0]->date = 2025-02-02;
-       $mclass[1]->date = 2025-02-02;
-       $mclass[2]->date = 1025-02-02;
-       $mclass = Masterclass::where('date', '>=', date("Y-m-d"))->orderBy('date', 'desc')->paginate(4, ['*'], 'masterclasses_out_date');
-       $response = dd($mclass[1]);
+       foreach ($masterclasses->date as $class_date){
+           return $count = $class_date = 2025-02-02;;
+       }
+    
+       $mclass = Masterclass::where('date', '>=', date("Y-m-d"))->orderBy('date', 'desc')->paginate(4, ['*'], 'masterclasses');
        
-       $response = $this->get(route('welcome', [$masterclasses_out_date]));
+       $response = $this->get(route('welcome', [$masterclasses => 'masterclasses']));
        // Then
        $response->assertStatus(200)
-                ->assertViewHasAll($masterclasses_out_date[2])
+                ->assertViewHasAll($masterclasses)
                 ->assertViewIs('welcome');
     }
 
@@ -113,71 +96,19 @@ class MasterclassTest extends TestCase
         // Given
         $masterclasses_out_date = Masterclass::factory(3)->create();
         
-        // When
-        $masterclasses_out_date->toArray();
-        $mclass[0]->date = 2025-02-02;
-        $mclass[1]->date = 2025-02-02;
-        $mclass[2]->date = 1025-02-02;
+        // When    
+        foreach ($masterclasses_out_date->date as $class_date){
+            return $count = $class_date = 1025-02-02;;
+        }
+
         $mclass = Masterclass::where('date', '<', date("Y-m-d"))->orderBy('date', 'desc')->paginate(4, ['*'], 'masterclasses_out_date');
-        $response = dd($mclass[1]);
         
-        $response = $this->get(route('welcome', [$masterclasses_out_date]));
+        $response = $this->get(route('welcome', [$masterclasses_out_date => 'masterclasses_out_date']));
         // Then
         $response->assertStatus(200)
-                 ->assertViewHasAll($masterclasses_out_date[2])
+                 ->assertViewHasAll($masterclasses_out_date)
                  ->assertViewIs('welcome');
     }
 
-  /*  public function test_create_form_masterclass_is_validated()
-    {
-        // Given
-        $masterclass = Masterclass::all();
-
-        // When
-        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
-
-        // Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
-    }
-
-    public function test_edit_form_masterclass_is_validated()
-    {
-        // Given
-        $masterclass = Masterclass::all();
-
-        // When
-        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
-
-        // Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
-    } 
-    
-    public function test_create_form_masterclass_cancel_button()
-    {
-        // Given
-        $masterclass = Masterclass::all();
-
-        // When
-        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
-
-        // Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
-    }
-
-    public function test_edit_form_masterclass_cancel_button()
-    {
-        // Given
-        $masterclass = Masterclass::all();
-
-        // When
-        $response = $this->get(route('welcome', $masterclass = ['masterclass']));
-
-        // Then
-        $response->assertStatus(200)
-                 ->assertViewIs('welcome');
-    } */
 }
 
